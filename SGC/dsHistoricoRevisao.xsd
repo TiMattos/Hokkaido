@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsHistoricoRevisao" targetNamespace="http://tempuri.org/dsHistoricoRevisao.xsd" xmlns:mstns="http://tempuri.org/dsHistoricoRevisao.xsd" xmlns="http://tempuri.org/dsHistoricoRevisao.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsHistoricoRevisao" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsHistoricoRevisao" msprop:Generator_UserDSName="dsHistoricoRevisao">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Historico" msprop:Generator_TableClassName="HistoricoDataTable" msprop:Generator_TableVarName="tableHistorico" msprop:Generator_TablePropName="Historico" msprop:Generator_RowDeletingName="HistoricoRowDeleting" msprop:Generator_RowChangingName="HistoricoRowChanging" msprop:Generator_RowEvHandlerName="HistoricoRowChangeEventHandler" msprop:Generator_RowDeletedName="HistoricoRowDeleted" msprop:Generator_UserTableName="Historico" msprop:Generator_RowChangedName="HistoricoRowChanged" msprop:Generator_RowEvArgName="HistoricoRowChangeEvent" msprop:Generator_RowClassName="HistoricoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tpServico" msprop:Generator_ColumnVarNameInTable="columntpServico" msprop:Generator_ColumnPropNameInRow="tpServico" msprop:Generator_ColumnPropNameInTable="tpServicoColumn" msprop:Generator_UserColumnName="tpServico" type="xs:string" minOccurs="0" />
+              <xs:element name="NomeCliente" msprop:Generator_ColumnVarNameInTable="columnNomeCliente" msprop:Generator_ColumnPropNameInRow="NomeCliente" msprop:Generator_ColumnPropNameInTable="NomeClienteColumn" msprop:Generator_UserColumnName="NomeCliente" type="xs:string" minOccurs="0" />
+              <xs:element name="NomeVeiculoCompleto" msprop:Generator_ColumnVarNameInTable="columnNomeVeiculoCompleto" msprop:Generator_ColumnPropNameInRow="NomeVeiculoCompleto" msprop:Generator_ColumnPropNameInTable="NomeVeiculoCompletoColumn" msprop:Generator_UserColumnName="NomeVeiculoCompleto" type="xs:string" minOccurs="0" />
+              <xs:element name="ServicoRealizado" msprop:Generator_ColumnVarNameInTable="columnServicoRealizado" msprop:Generator_ColumnPropNameInRow="ServicoRealizado" msprop:Generator_ColumnPropNameInTable="ServicoRealizadoColumn" msprop:Generator_UserColumnName="ServicoRealizado" type="xs:string" minOccurs="0" />
+              <xs:element name="DataServico" msprop:Generator_ColumnVarNameInTable="columnDataServico" msprop:Generator_ColumnPropNameInRow="DataServico" msprop:Generator_ColumnPropNameInTable="DataServicoColumn" msprop:Generator_UserColumnName="DataServico" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Veiculo" msprop:Generator_ColumnVarNameInTable="columnVeiculo" msprop:Generator_ColumnPropNameInRow="Veiculo" msprop:Generator_ColumnPropNameInTable="VeiculoColumn" msprop:Generator_UserColumnName="Veiculo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

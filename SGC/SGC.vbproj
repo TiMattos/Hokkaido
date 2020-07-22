@@ -1,0 +1,2066 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54574AF6-33CA-46B9-A261-8F6198790260}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SGC.My.MyApplication</StartupObject>
+    <RootNamespace>SGC</RootNamespace>
+    <AssemblyName>SGC</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Publisher_SGC\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SGC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SGC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>SGC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>SGC.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hokkaido_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7BFEB6CFE6B8159109E7D8DC6AA80A027D1797AC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SGC_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.0\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.0\lib\AForge.Imaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.1.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.1\lib\AForge.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.0.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.0\lib\AForge.Video.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4137.9688, Culture=neutral, PublicKeyToken=a4292a325f69b123, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.15.1840\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.15.1840\lib\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.15.1840\lib\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.15.1840\lib\CrystalDecisions.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Fasterflect, Version=2.1.3.0, Culture=neutral, PublicKeyToken=38d18473284c1ca7, processorArchitecture=MSIL">
+      <HintPath>..\packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.10.0.25332, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.10.0\lib\net40\Google.Apis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.10.0.25333, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.10.0\lib\net40\Google.Apis.Auth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.10.0.25333, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.10.0\lib\net40\Google.Apis.Auth.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Calendar.v3, Version=1.20.0.745, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Calendar.v3.1.20.0.745\lib\portable-net40+sl50+netcore45+wpa81+wp8\Google.Apis.Calendar.v3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.10.0.25331, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.10.0\lib\portable-net40+sl50+win+wpa81+wp80\Google.Apis.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.10.0.25332, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.10.0\lib\net40\Google.Apis.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.GData.AccessControl">
+      <HintPath>..\..\..\..\Google\Google Data API SDK\Redist\Google.GData.AccessControl.DLL</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Calendar">
+      <HintPath>..\..\..\..\Google\Google Data API SDK\Redist\Google.GData.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client">
+      <HintPath>..\..\..\..\Google\Google Data API SDK\Redist\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions">
+      <HintPath>..\..\..\..\Google\Google Data API SDK\Redist\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Xpand.ExpressApp.Dashboard, Version=16.1.6.2, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <HintPath>..\packages\eXpandDashboard.16.1.6.2\lib\net40\Xpand.ExpressApp.Dashboard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Reports, Version=16.1.6.2, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <HintPath>..\packages\eXpandReports.16.1.6.2\lib\net40\Xpand.ExpressApp.Reports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Reports.Win, Version=16.1.6.2, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <HintPath>..\packages\eXpandReportsWin.16.1.6.2\lib\net40\Xpand.ExpressApp.Reports.Win.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Security, Version=16.1.6.2, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <HintPath>..\packages\eXpandSecurity.16.1.6.2\lib\net40\Xpand.ExpressApp.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xpand.Persistent.Base, Version=16.1.6.2, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <HintPath>..\packages\eXpandLib.16.1.6.2\lib\net40\Xpand.Persistent.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xpand.Persistent.BaseImpl, Version=16.1.6.2, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <HintPath>..\packages\eXpandLib.16.1.6.2\lib\net40\Xpand.Persistent.BaseImpl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xpand.Utils, Version=16.1.6.2, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <HintPath>..\packages\eXpandLib.16.1.6.2\lib\net40\Xpand.Utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xpand.Xpo, Version=16.1.6.2, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <HintPath>..\packages\eXpandLib.16.1.6.2\lib\net40\Xpand.Xpo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Zlib.Portable, Version=1.11.0.0, Culture=neutral, PublicKeyToken=431cba815f6a8b5b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="crHistoricoRevisoes.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crHistoricoRevisoes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crOrcamento.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crOrcamento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crRelServicosRealizados.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crRelServicosRealizados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsHistoricoRevisao.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHistoricoRevisao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsHistoricoRevisao.vb">
+      <DependentUpon>dsHistoricoRevisao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsServicos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsServicos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsServicos.vb">
+      <DependentUpon>dsServicos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgendamento.Designer.vb">
+      <DependentUpon>frmAgendamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgendamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarClientes.Designer.vb">
+      <DependentUpon>frmBuscarClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarCliente.Designer.vb">
+      <DependentUpon>frmCadastrarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracao.Designer.vb">
+      <DependentUpon>frmConfiguracao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExibeBalancoFinanceiro.Designer.vb">
+      <DependentUpon>frmExibeBalancoFinanceiro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExibeBalancoFinanceiro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExibeDadosCadastro.Designer.vb">
+      <DependentUpon>frmExibeDadosCadastro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExibeDadosCadastro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistoricoRevisao.Designer.vb">
+      <DependentUpon>frmHistoricoRevisao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistoricoRevisao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIncluirVeiculo.Designer.vb">
+      <DependentUpon>frmIncluirVeiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIncluirVeiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMensagem.Designer.vb">
+      <DependentUpon>frmMensagem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMensagem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrcamento.Designer.vb">
+      <DependentUpon>frmOrcamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrcamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProgresso.Designer.vb">
+      <DependentUpon>frmProgresso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgresso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicos.Designer.vb">
+      <DependentUpon>frmServicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmServicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewer.Designer.vb">
+      <DependentUpon>frmViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoogleCalSvc.asmx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="crHistoricoRevisoes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crHistoricoRevisoes.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crOrcamento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crOrcamento.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crRelServicosRealizados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crRelServicosRealizados.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgendamento.resx">
+      <DependentUpon>frmAgendamento.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarClientes.resx">
+      <DependentUpon>frmBuscarClientes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarCliente.resx">
+      <DependentUpon>frmCadastrarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracao.resx">
+      <DependentUpon>frmConfiguracao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExibeBalancoFinanceiro.resx">
+      <DependentUpon>frmExibeBalancoFinanceiro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExibeDadosCadastro.resx">
+      <DependentUpon>frmExibeDadosCadastro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistoricoRevisao.resx">
+      <DependentUpon>frmHistoricoRevisao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIncluirVeiculo.resx">
+      <DependentUpon>frmIncluirVeiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMensagem.resx">
+      <DependentUpon>frmMensagem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrcamento.resx">
+      <DependentUpon>frmOrcamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgresso.resx">
+      <DependentUpon>frmProgresso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServicos.resx">
+      <DependentUpon>frmServicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewer.resx">
+      <DependentUpon>frmViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dsHistoricoRevisao.xsc">
+      <DependentUpon>dsHistoricoRevisao.xsd</DependentUpon>
+    </None>
+    <None Include="dsHistoricoRevisao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHistoricoRevisao.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsHistoricoRevisao.xss">
+      <DependentUpon>dsHistoricoRevisao.xsd</DependentUpon>
+    </None>
+    <None Include="dsServicos.xsc">
+      <DependentUpon>dsServicos.xsd</DependentUpon>
+    </None>
+    <None Include="dsServicos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsServicos.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsServicos.xss">
+      <DependentUpon>dsServicos.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\BLL.BLLCLientes.datasource" />
+    <None Include="My Project\DataSources\BLL.BLLUsuario.datasource" />
+    <None Include="My Project\DataSources\frmBuscarClientes.datasource" />
+    <None Include="My Project\DataSources\frmCadastrarCliente.datasource" />
+    <None Include="My Project\DataSources\frmExibeDadosCadastro.datasource" />
+    <None Include="My Project\DataSources\frmLogin.datasource" />
+    <None Include="My Project\DataSources\frmPrincipal.datasource" />
+    <None Include="My Project\DataSources\frmRelServicos.datasource" />
+    <None Include="My Project\DataSources\frmRevisao.datasource" />
+    <None Include="My Project\DataSources\frmServicos.datasource" />
+    <None Include="My Project\DataSources\INFO.ClienteINFO.datasource" />
+    <None Include="My Project\DataSources\INFO.UsuarioINFO.datasource" />
+    <None Include="My Project\DataSources\INFO.VeiculoINFO.datasource" />
+    <None Include="My Project\DataSources\SGC.My.MyApplication.datasource" />
+    <None Include="My Project\DataSources\SGC.My.MySettings.datasource" />
+    <None Include="My Project\DataSources\UTIL.Funcoes.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="SGC_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.vbproj">
+      <Project>{dab226e1-54b6-4d6b-b504-1c009cbd0adc}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\INFO\INFO.vbproj">
+      <Project>{a3fbd5ae-c317-439c-bd2d-c9f16ef7139b}</Project>
+      <Name>INFO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UTIL\UTIL.vbproj">
+      <Project>{d270f63a-8cae-48d9-9372-01c661cf28d1}</Project>
+      <Name>UTIL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\add_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\add_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_grow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_okay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_osx_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_grow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_okay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_shrink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\application_windows_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\applications_osx_shrink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\applications_windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_large_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_large_down_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_large_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_large_left_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_large_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_large_right_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_large_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_large_up_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_medium_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_medium_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_medium_lower_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_medium_lower_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_medium_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_medium_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_medium_upper_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_medium_upper_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_small_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_small_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_small_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_small_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_state_blue_collapsed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_state_blue_expanded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_state_blue_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_state_blue_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_state_grey_collapsed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_state_grey_expanded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_state_grey_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\arrow_state_grey_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\badge_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\badge_cancel_online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\badge_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\badge_save_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\badge_send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\badge_share_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\badge_share_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\badge_updated_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\badge_updated_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\box_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\box_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\box_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\box_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\box_okay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\box_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\box_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\box_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\breadcrumb_separator_arrow_1_dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\breadcrumb_separator_arrow_2_dots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\breadcrumb_separator_arrow_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\breadcrumb_separator_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\breadcrumb_separator_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\bullet_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\bullet_blue_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\bullet_blue_collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\bullet_blue_collapse_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\bullet_blue_expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\bullet_blue_expand_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\bullet_blue_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\button_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\button_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\button_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day_event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_day_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_month.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_month_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_month_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_month_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_month_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_month_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_month_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_month_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_month_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_week.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_week_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_week_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\calendar_week_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\cellphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\comment_alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\comment_new_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\comment_new_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\comment_question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\comment_reply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\comments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\comments_reply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\comments_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_blue_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_blue_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_blue_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_blue_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_grey_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_grey_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_grey_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\contact_grey_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\diamonds_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\diamonds_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\diamonds_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\diamonds_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_marked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_okay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_a4_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_marked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_okay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_letter_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_small_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\document_small_upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\documents_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\documents_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\documents_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\documents_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\documents_okay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\documents_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\documents_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\documents_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\error_do_not.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\error_do_not_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\error_fuck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\error_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_add_simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_opened.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_opened_stuffed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_remove_simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_stuffed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_stuffed_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_stuffed_add_simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_stuffed_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_stuffed_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_stuffed_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_stuffed_remove_simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_type_document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_type_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_type_movie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_type_music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_classic_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_add_simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_opened.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_opened_stuffed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_remove_simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_stuffed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_stuffed_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_stuffed_add_simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_stuffed_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_stuffed_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_stuffed_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_stuffed_remove_simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_type_document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_type_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_type_movie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_type_music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_modernist_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_stuffed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_stuffed_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_stuffed_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\folder_stuffed_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\gem_cancel_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\gem_cancel_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\gem_cancel_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\gem_cancel_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\gem_cancel_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\gem_okay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\gem_options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\gem_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\gem_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_blue_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_blue_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_blue_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_blue_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_green_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_green_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_green_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_green_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_grey_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_grey_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_grey_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\group_grey_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcard_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcard_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcard_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcard_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcard_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcard_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcard_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcard_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcards_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcards_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcards_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcards_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcards_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcards_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\hcards_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\heart_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\heart_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\heart_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\heart_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\heart_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\heart_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\heart_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\heart_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\home_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\home_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\iconDump.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\image_cultured.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\image_modernist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\lock_large_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\lock_large_unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\lock_small_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\lock_small_unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_dark_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_dark_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_dark_new_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_dark_new_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_dark_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_dark_stuffed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_dark_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_light_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_light_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_light_new_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_light_new_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_light_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_light_stuffed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\mail_light_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_grey_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_grey_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_grey_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_grey_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_grey_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_light_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_yellow_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_rounded_yellow_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_grey_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_grey_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_grey_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_grey_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_grey_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_light_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_removed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_yellow_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\marker_squared_yellow_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_dark_first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_dark_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_dark_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_dark_pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_dark_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_dark_rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_dark_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_first_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_forward_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_last_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_light_first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_light_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_light_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_light_pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_light_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_light_rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_light_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_pause_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_play_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_rewind_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\media_controls_stop_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\menu_dropdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\movie_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\movie_blue_film_strip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\movie_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\movie_grey_camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\movie_grey_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\movie_grey_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\movie_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\music_cd_blue_note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\music_cd_blue_notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\music_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\music_green_note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\music_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\new_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\new_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\new_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\new_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\new_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\new_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\new_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\okay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\okay_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\pagination_1_first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\pagination_1_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\pagination_1_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\pagination_1_previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\pencil_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\quanitity_capsule_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\quantity_capsule_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\quantity_capsule_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\quantity_capsule_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\quantity_capsule_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\refresh_backwards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\refresh_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\remove_minus_sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\remove_minus_sign_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\remove_minus_sign_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\remove_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\rich_text_align_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\rich_text_align_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\rich_text_align_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\rich_text_bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\rich_text_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\rich_text_italics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\rich_text_underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\share_abstract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\share_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\shield_chevrons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\shield_star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\slider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\slider_no_pointy_thing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\smiley_amused.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\smiley_happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\smiley_surprised.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\sprocket_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\sprocket_dark_dropdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\sprocket_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\sprocket_light_dropdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\star_boxed_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\star_boxed_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\star_boxed_half.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\star_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\star_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\star_half.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\tag_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\tag_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\tag_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\thumb_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\thumb_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\ticket_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\ticket_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_less_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_list_with_thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_more_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_outline_detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_tree_classic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\view_tree_modernist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\volume_loud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\volume_mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\volume_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\volume_quiet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\warning_triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\warning_triangle_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\zoom_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\zoom_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="carro.ico" />
+    <Content Include="hokkaido_icon.ico" />
+    <None Include="Resources\hokkaido logo edit.png" />
+    <None Include="Resources\Logo Hokkaido.png" />
+    <None Include="Resources\Logo Hokkaido Jpeg.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
