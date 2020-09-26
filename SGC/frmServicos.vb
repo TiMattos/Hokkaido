@@ -48,7 +48,7 @@ Public Class frmServicos
 
     End Sub
 
-    Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKm.KeyPress
+    Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs)
         Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
 
         KeyAscii = CShort(SoNumeros(KeyAscii))
@@ -101,7 +101,7 @@ Public Class frmServicos
         Dim valorMO As Single
 
         Try
-            Me.lblAlerta.Text = String.Empty
+            'Me.lblAlerta.Text = String.Empty
 
             If Not ValidaCampos() Then
                 Exit Sub
@@ -152,7 +152,7 @@ Public Class frmServicos
                 Exit Sub
             End If
 
-            Me.lblAlerta.Text = "AGUARDE, GERANDO ORDEM DE SERVIÇO..."
+            'Me.lblAlerta.Text = "AGUARDE, GERANDO ORDEM DE SERVIÇO..."
             Application.UseWaitCursor = True
             Application.DoEvents()
 
@@ -210,8 +210,8 @@ Public Class frmServicos
             'lobjFrmVisualizador.ShowDialog()
             crServico.PrintToPrinter(1, 0, 0, 1)
 
-            Me.lblAlerta.Text = String.Empty
-            Me.lblAlerta.Refresh()
+            'Me.lblAlerta.Text = String.Empty
+            'Me.lblAlerta.Refresh()
             'If MessageBox.Show("Deseja enviar o relatório de manutenção por email?", "Enviar Email?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             '    'sbBarraMensagem("ENVIANDO EMAIL, AGURADE...")
             '    Me.lblAlerta.Text = "AGUARDE, ENVIANDO EMAIL..."
@@ -222,10 +222,11 @@ Public Class frmServicos
             'End If
 
             Limpar()
+            Me.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
-            Me.lblAlerta.Text = String.Empty
+            'Me.lblAlerta.Text = String.Empty
         End Try
 
     End Sub
@@ -365,7 +366,7 @@ Public Class frmServicos
 
         Try
             objSmtp.Send(objEmail)
-            Me.lblAlerta.Text = "E-mail enviado com sucesso !"
+            'Me.lblAlerta.Text = "E-mail enviado com sucesso !"
             Application.UseWaitCursor = False
             Application.DoEvents()
             MessageBox.Show("E-mail enviado com sucesso !")
@@ -376,7 +377,7 @@ Public Class frmServicos
         objEmail.Dispose()
         'anexo.Dispose();
     End Sub
-    Private Sub btnSair_Click(sender As Object, e As EventArgs) Handles btnSair.Click
+    Private Sub btnSair_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         Me.Close()
     End Sub
 
@@ -408,7 +409,7 @@ Public Class frmServicos
         Label2.Enabled = True
     End Sub
 
-    Private Sub txtKmAtual_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKmAtual.KeyPress
+    Private Sub txtKmAtual_KeyPress(sender As Object, e As KeyPressEventArgs)
         Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
 
         KeyAscii = CShort(SoNumeros(KeyAscii))
@@ -420,7 +421,7 @@ Public Class frmServicos
         End If
     End Sub
 
-    Private Sub txtMaodeObra_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMaodeObra.KeyPress
+    Private Sub txtMaodeObra_KeyPress(sender As Object, e As KeyPressEventArgs)
         Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
 
         KeyAscii = CShort(SoNumeros(KeyAscii))

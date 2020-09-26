@@ -61,6 +61,7 @@ Partial Class frmCadastrarCliente
         Me.Guna2Panel1.Controls.Add(Me.btnSair)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GroupBox2)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GroupBox1)
+        Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Guna2Panel1.Location = New System.Drawing.Point(-2, -1)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1

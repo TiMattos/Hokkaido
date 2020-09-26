@@ -23,409 +23,513 @@ Partial Class frmServicos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmServicos))
-        Me.txtItensManutencao = New System.Windows.Forms.TextBox()
-        Me.txtKm = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblNomeCliente = New System.Windows.Forms.Label()
-        Me.lblVeiculo = New System.Windows.Forms.Label()
-        Me.lblModelo = New System.Windows.Forms.Label()
-        Me.lblAno = New System.Windows.Forms.Label()
-        Me.btnSalvar = New System.Windows.Forms.Button()
-        Me.btnSair = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.lblPlaca = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cmbVeiculos = New System.Windows.Forms.ComboBox()
-        Me.lblAlerta = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtKmAtual = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.rdbServico = New System.Windows.Forms.RadioButton()
-        Me.rdbRevisao = New System.Windows.Forms.RadioButton()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtMaodeObra = New System.Windows.Forms.TextBox()
-        Me.txtObs = New System.Windows.Forms.TextBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
+        Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblNomeCliente = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblVeiculo = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblModelo = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblPlaca = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblAno = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.cmbVeiculos = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.rdbRevisao = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.rdbServico = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Label1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.txtKm = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel15 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.txtMaodeObra = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtKmAtual = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2GroupBox3 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.txtItensManutencao = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtObs = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel16 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.btnSalvar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2GroupBox1.SuspendLayout()
+        Me.Guna2Panel1.SuspendLayout()
+        Me.Guna2GroupBox2.SuspendLayout()
+        Me.Guna2GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
-        'txtItensManutencao
+        'Guna2GroupBox1
         '
-        Me.txtItensManutencao.Location = New System.Drawing.Point(16, 17)
-        Me.txtItensManutencao.Multiline = True
-        Me.txtItensManutencao.Name = "txtItensManutencao"
-        Me.txtItensManutencao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtItensManutencao.Size = New System.Drawing.Size(456, 218)
-        Me.txtItensManutencao.TabIndex = 5
+        Me.Guna2GroupBox1.Controls.Add(Me.cmbVeiculos)
+        Me.Guna2GroupBox1.Controls.Add(Me.lblAno)
+        Me.Guna2GroupBox1.Controls.Add(Me.lblPlaca)
+        Me.Guna2GroupBox1.Controls.Add(Me.lblModelo)
+        Me.Guna2GroupBox1.Controls.Add(Me.lblVeiculo)
+        Me.Guna2GroupBox1.Controls.Add(Me.lblNomeCliente)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel6)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel5)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel4)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel3)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel2)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox1.Location = New System.Drawing.Point(12, 8)
+        Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
+        Me.Guna2GroupBox1.ShadowDecoration.Parent = Me.Guna2GroupBox1
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(437, 185)
+        Me.Guna2GroupBox1.TabIndex = 38
+        Me.Guna2GroupBox1.Text = "Dados do Veículo"
         '
-        'txtKm
+        'Guna2Panel1
         '
-        Me.txtKm.Location = New System.Drawing.Point(87, 44)
-        Me.txtKm.Name = "txtKm"
-        Me.txtKm.Size = New System.Drawing.Size(54, 20)
-        Me.txtKm.TabIndex = 3
+        Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Guna2Panel1.BorderColor = System.Drawing.Color.LightGray
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
+        Me.Guna2Panel1.Controls.Add(Me.btnSalvar)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2GroupBox3)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2GroupBox2)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2GroupBox1)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 6)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(506, 721)
+        Me.Guna2Panel1.TabIndex = 39
         '
-        'Label1
+        'Guna2HtmlLabel1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 51)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 13)
-        Me.Label1.TabIndex = 18
-        Me.Label1.Text = "Revisão de "
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(19, 53)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(65, 17)
+        Me.Guna2HtmlLabel1.TabIndex = 0
+        Me.Guna2HtmlLabel1.Text = "Proprietário"
         '
-        'Label2
+        'Guna2HtmlLabel2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(147, 51)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Mil Kms"
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(19, 79)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(42, 17)
+        Me.Guna2HtmlLabel2.TabIndex = 1
+        Me.Guna2HtmlLabel2.Text = "Veículo"
+        '
+        'Guna2HtmlLabel3
+        '
+        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(19, 126)
+        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(42, 17)
+        Me.Guna2HtmlLabel3.TabIndex = 2
+        Me.Guna2HtmlLabel3.Text = "Veículo"
+        '
+        'Guna2HtmlLabel4
+        '
+        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(19, 156)
+        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(44, 17)
+        Me.Guna2HtmlLabel4.TabIndex = 3
+        Me.Guna2HtmlLabel4.Text = "Modelo"
+        '
+        'Guna2HtmlLabel5
+        '
+        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(218, 126)
+        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(25, 17)
+        Me.Guna2HtmlLabel5.TabIndex = 4
+        Me.Guna2HtmlLabel5.Text = "Ano"
+        '
+        'Guna2HtmlLabel6
+        '
+        Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(218, 156)
+        Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
+        Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(31, 17)
+        Me.Guna2HtmlLabel6.TabIndex = 5
+        Me.Guna2HtmlLabel6.Text = "Placa"
         '
         'lblNomeCliente
         '
-        Me.lblNomeCliente.AutoSize = True
-        Me.lblNomeCliente.Location = New System.Drawing.Point(118, 39)
+        Me.lblNomeCliente.BackColor = System.Drawing.Color.Transparent
+        Me.lblNomeCliente.Location = New System.Drawing.Point(99, 55)
         Me.lblNomeCliente.Name = "lblNomeCliente"
-        Me.lblNomeCliente.Size = New System.Drawing.Size(33, 13)
-        Me.lblNomeCliente.TabIndex = 21
-        Me.lblNomeCliente.Text = "nome"
+        Me.lblNomeCliente.Size = New System.Drawing.Size(65, 17)
+        Me.lblNomeCliente.TabIndex = 6
+        Me.lblNomeCliente.Text = "Proprietário"
         '
         'lblVeiculo
         '
-        Me.lblVeiculo.AutoSize = True
-        Me.lblVeiculo.Location = New System.Drawing.Point(118, 90)
+        Me.lblVeiculo.BackColor = System.Drawing.Color.Transparent
+        Me.lblVeiculo.Location = New System.Drawing.Point(99, 126)
         Me.lblVeiculo.Name = "lblVeiculo"
-        Me.lblVeiculo.Size = New System.Drawing.Size(41, 13)
-        Me.lblVeiculo.TabIndex = 22
-        Me.lblVeiculo.Text = "veiculo"
+        Me.lblVeiculo.Size = New System.Drawing.Size(40, 15)
+        Me.lblVeiculo.TabIndex = 7
+        Me.lblVeiculo.Text = "Veículo"
         '
         'lblModelo
         '
-        Me.lblModelo.AutoSize = True
-        Me.lblModelo.Location = New System.Drawing.Point(118, 116)
+        Me.lblModelo.BackColor = System.Drawing.Color.Transparent
+        Me.lblModelo.Location = New System.Drawing.Point(99, 156)
         Me.lblModelo.Name = "lblModelo"
-        Me.lblModelo.Size = New System.Drawing.Size(41, 13)
-        Me.lblModelo.TabIndex = 23
-        Me.lblModelo.Text = "modelo"
-        '
-        'lblAno
-        '
-        Me.lblAno.AutoSize = True
-        Me.lblAno.Location = New System.Drawing.Point(288, 90)
-        Me.lblAno.Name = "lblAno"
-        Me.lblAno.Size = New System.Drawing.Size(25, 13)
-        Me.lblAno.TabIndex = 24
-        Me.lblAno.Text = "ano"
-        '
-        'btnSalvar
-        '
-        Me.btnSalvar.Image = Global.SGC.My.Resources.Resources.check
-        Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalvar.Location = New System.Drawing.Point(338, 659)
-        Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(75, 23)
-        Me.btnSalvar.TabIndex = 7
-        Me.btnSalvar.Text = "Salvar"
-        Me.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSalvar.UseVisualStyleBackColor = True
-        '
-        'btnSair
-        '
-        Me.btnSair.Image = Global.SGC.My.Resources.Resources.remove
-        Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSair.Location = New System.Drawing.Point(426, 659)
-        Me.btnSair.Name = "btnSair"
-        Me.btnSair.Size = New System.Drawing.Size(75, 23)
-        Me.btnSair.TabIndex = 8
-        Me.btnSair.Text = "Sair"
-        Me.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSair.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(49, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 13)
-        Me.Label3.TabIndex = 27
-        Me.Label3.Text = "Proprietário:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(65, 90)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(47, 13)
-        Me.Label4.TabIndex = 28
-        Me.Label4.Text = "Veículo:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(65, 116)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 13)
-        Me.Label5.TabIndex = 29
-        Me.Label5.Text = "Modelo:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(251, 90)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(29, 13)
-        Me.Label6.TabIndex = 30
-        Me.Label6.Text = "Ano:"
+        Me.lblModelo.Size = New System.Drawing.Size(44, 17)
+        Me.lblModelo.TabIndex = 8
+        Me.lblModelo.Text = "Modelo"
         '
         'lblPlaca
         '
-        Me.lblPlaca.AutoSize = True
-        Me.lblPlaca.Location = New System.Drawing.Point(288, 116)
+        Me.lblPlaca.BackColor = System.Drawing.Color.Transparent
+        Me.lblPlaca.Location = New System.Drawing.Point(266, 156)
         Me.lblPlaca.Name = "lblPlaca"
-        Me.lblPlaca.Size = New System.Drawing.Size(33, 13)
-        Me.lblPlaca.TabIndex = 31
-        Me.lblPlaca.Text = "placa"
+        Me.lblPlaca.Size = New System.Drawing.Size(30, 15)
+        Me.lblPlaca.TabIndex = 9
+        Me.lblPlaca.Text = "Placa"
         '
-        'Label7
+        'lblAno
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(243, 116)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(37, 13)
-        Me.Label7.TabIndex = 32
-        Me.Label7.Text = "Placa:"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.cmbVeiculos)
-        Me.GroupBox1.Controls.Add(Me.lblAlerta)
-        Me.GroupBox1.Controls.Add(Me.lblPlaca)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.lblNomeCliente)
-        Me.GroupBox1.Controls.Add(Me.lblVeiculo)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.lblModelo)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.lblAno)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(489, 140)
-        Me.GroupBox1.TabIndex = 33
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Dados do Veículo"
+        Me.lblAno.BackColor = System.Drawing.Color.Transparent
+        Me.lblAno.Location = New System.Drawing.Point(266, 126)
+        Me.lblAno.Name = "lblAno"
+        Me.lblAno.Size = New System.Drawing.Size(22, 15)
+        Me.lblAno.TabIndex = 10
+        Me.lblAno.Text = "Ano"
         '
         'cmbVeiculos
         '
-        Me.cmbVeiculos.FormattingEnabled = True
-        Me.cmbVeiculos.Location = New System.Drawing.Point(118, 60)
+        Me.cmbVeiculos.BackColor = System.Drawing.Color.Transparent
+        Me.cmbVeiculos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbVeiculos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbVeiculos.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbVeiculos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbVeiculos.FocusedState.Parent = Me.cmbVeiculos
+        Me.cmbVeiculos.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbVeiculos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmbVeiculos.HoverState.Parent = Me.cmbVeiculos
+        Me.cmbVeiculos.ItemHeight = 30
+        Me.cmbVeiculos.ItemsAppearance.Parent = Me.cmbVeiculos
+        Me.cmbVeiculos.Location = New System.Drawing.Point(99, 76)
         Me.cmbVeiculos.Name = "cmbVeiculos"
-        Me.cmbVeiculos.Size = New System.Drawing.Size(200, 21)
-        Me.cmbVeiculos.TabIndex = 34
+        Me.cmbVeiculos.ShadowDecoration.Parent = Me.cmbVeiculos
+        Me.cmbVeiculos.Size = New System.Drawing.Size(197, 36)
+        Me.cmbVeiculos.TabIndex = 11
         '
-        'lblAlerta
+        'Guna2GroupBox2
         '
-        Me.lblAlerta.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAlerta.ForeColor = System.Drawing.Color.Red
-        Me.lblAlerta.Location = New System.Drawing.Point(18, 17)
-        Me.lblAlerta.Name = "lblAlerta"
-        Me.lblAlerta.Size = New System.Drawing.Size(465, 13)
-        Me.lblAlerta.TabIndex = 33
-        Me.lblAlerta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.txtKmAtual)
-        Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.rdbServico)
-        Me.GroupBox2.Controls.Add(Me.rdbRevisao)
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.txtMaodeObra)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.txtKm)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 149)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(489, 78)
-        Me.GroupBox2.TabIndex = 34
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Dados da Revisão"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(410, 21)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(43, 13)
-        Me.Label10.TabIndex = 24
-        Me.Label10.Text = "Mil Kms"
-        '
-        'txtKmAtual
-        '
-        Me.txtKmAtual.Location = New System.Drawing.Point(326, 15)
-        Me.txtKmAtual.Name = "txtKmAtual"
-        Me.txtKmAtual.Size = New System.Drawing.Size(78, 20)
-        Me.txtKmAtual.TabIndex = 23
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(267, 22)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(51, 13)
-        Me.Label9.TabIndex = 22
-        Me.Label9.Text = "Km atual:"
-        '
-        'rdbServico
-        '
-        Me.rdbServico.AutoSize = True
-        Me.rdbServico.Location = New System.Drawing.Point(100, 19)
-        Me.rdbServico.Name = "rdbServico"
-        Me.rdbServico.Size = New System.Drawing.Size(61, 17)
-        Me.rdbServico.TabIndex = 2
-        Me.rdbServico.TabStop = True
-        Me.rdbServico.Text = "Serviço"
-        Me.rdbServico.UseVisualStyleBackColor = True
+        Me.Guna2GroupBox2.Controls.Add(Me.txtKmAtual)
+        Me.Guna2GroupBox2.Controls.Add(Me.txtMaodeObra)
+        Me.Guna2GroupBox2.Controls.Add(Me.Guna2HtmlLabel15)
+        Me.Guna2GroupBox2.Controls.Add(Me.Guna2HtmlLabel14)
+        Me.Guna2GroupBox2.Controls.Add(Me.Label2)
+        Me.Guna2GroupBox2.Controls.Add(Me.txtKm)
+        Me.Guna2GroupBox2.Controls.Add(Me.Label1)
+        Me.Guna2GroupBox2.Controls.Add(Me.rdbServico)
+        Me.Guna2GroupBox2.Controls.Add(Me.rdbRevisao)
+        Me.Guna2GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox2.Location = New System.Drawing.Point(12, 199)
+        Me.Guna2GroupBox2.Name = "Guna2GroupBox2"
+        Me.Guna2GroupBox2.ShadowDecoration.Parent = Me.Guna2GroupBox2
+        Me.Guna2GroupBox2.Size = New System.Drawing.Size(437, 130)
+        Me.Guna2GroupBox2.TabIndex = 39
+        Me.Guna2GroupBox2.Text = "Dados da Revisão"
         '
         'rdbRevisao
         '
         Me.rdbRevisao.AutoSize = True
-        Me.rdbRevisao.Location = New System.Drawing.Point(18, 19)
+        Me.rdbRevisao.BackColor = System.Drawing.Color.Transparent
+        Me.rdbRevisao.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rdbRevisao.CheckedState.BorderThickness = 0
+        Me.rdbRevisao.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rdbRevisao.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.rdbRevisao.CheckedState.InnerOffset = -4
+        Me.rdbRevisao.Location = New System.Drawing.Point(19, 57)
         Me.rdbRevisao.Name = "rdbRevisao"
-        Me.rdbRevisao.Size = New System.Drawing.Size(64, 17)
-        Me.rdbRevisao.TabIndex = 1
-        Me.rdbRevisao.TabStop = True
+        Me.rdbRevisao.Size = New System.Drawing.Size(65, 19)
+        Me.rdbRevisao.TabIndex = 0
         Me.rdbRevisao.Text = "Revisão"
-        Me.rdbRevisao.UseVisualStyleBackColor = True
+        Me.rdbRevisao.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.rdbRevisao.UncheckedState.BorderThickness = 2
+        Me.rdbRevisao.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.rdbRevisao.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        Me.rdbRevisao.UseVisualStyleBackColor = False
         '
-        'Label8
+        'rdbServico
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(250, 51)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(70, 13)
-        Me.Label8.TabIndex = 21
-        Me.Label8.Text = "Mão de obra:"
+        Me.rdbServico.AutoSize = True
+        Me.rdbServico.BackColor = System.Drawing.Color.Transparent
+        Me.rdbServico.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rdbServico.CheckedState.BorderThickness = 0
+        Me.rdbServico.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rdbServico.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.rdbServico.CheckedState.InnerOffset = -4
+        Me.rdbServico.Location = New System.Drawing.Point(99, 57)
+        Me.rdbServico.Name = "rdbServico"
+        Me.rdbServico.Size = New System.Drawing.Size(63, 19)
+        Me.rdbServico.TabIndex = 1
+        Me.rdbServico.Text = "Serviço"
+        Me.rdbServico.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.rdbServico.UncheckedState.BorderThickness = 2
+        Me.rdbServico.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.rdbServico.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        Me.rdbServico.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(25, 99)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(59, 17)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Revisão de"
+        '
+        'txtKm
+        '
+        Me.txtKm.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtKm.DefaultText = ""
+        Me.txtKm.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtKm.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtKm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtKm.DisabledState.Parent = Me.txtKm
+        Me.txtKm.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtKm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtKm.FocusedState.Parent = Me.txtKm
+        Me.txtKm.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtKm.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtKm.HoverState.Parent = Me.txtKm
+        Me.txtKm.Location = New System.Drawing.Point(88, 92)
+        Me.txtKm.Name = "txtKm"
+        Me.txtKm.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtKm.PlaceholderText = ""
+        Me.txtKm.SelectedText = ""
+        Me.txtKm.ShadowDecoration.Parent = Me.txtKm
+        Me.txtKm.Size = New System.Drawing.Size(74, 24)
+        Me.txtKm.TabIndex = 13
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Location = New System.Drawing.Point(168, 99)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(46, 17)
+        Me.Label2.TabIndex = 14
+        Me.Label2.Text = "mil Kms"
+        '
+        'Guna2HtmlLabel14
+        '
+        Me.Guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel14.Location = New System.Drawing.Point(266, 57)
+        Me.Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
+        Me.Guna2HtmlLabel14.Size = New System.Drawing.Size(50, 17)
+        Me.Guna2HtmlLabel14.TabIndex = 15
+        Me.Guna2HtmlLabel14.Text = "KM atual"
+        '
+        'Guna2HtmlLabel15
+        '
+        Me.Guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel15.Location = New System.Drawing.Point(250, 99)
+        Me.Guna2HtmlLabel15.Name = "Guna2HtmlLabel15"
+        Me.Guna2HtmlLabel15.Size = New System.Drawing.Size(70, 17)
+        Me.Guna2HtmlLabel15.TabIndex = 16
+        Me.Guna2HtmlLabel15.Text = "Mão de obra"
         '
         'txtMaodeObra
         '
-        Me.txtMaodeObra.Location = New System.Drawing.Point(326, 45)
+        Me.txtMaodeObra.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtMaodeObra.DefaultText = ""
+        Me.txtMaodeObra.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtMaodeObra.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtMaodeObra.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtMaodeObra.DisabledState.Parent = Me.txtMaodeObra
+        Me.txtMaodeObra.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtMaodeObra.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtMaodeObra.FocusedState.Parent = Me.txtMaodeObra
+        Me.txtMaodeObra.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtMaodeObra.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtMaodeObra.HoverState.Parent = Me.txtMaodeObra
+        Me.txtMaodeObra.Location = New System.Drawing.Point(326, 92)
         Me.txtMaodeObra.Name = "txtMaodeObra"
-        Me.txtMaodeObra.Size = New System.Drawing.Size(127, 20)
-        Me.txtMaodeObra.TabIndex = 4
+        Me.txtMaodeObra.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtMaodeObra.PlaceholderText = ""
+        Me.txtMaodeObra.SelectedText = ""
+        Me.txtMaodeObra.ShadowDecoration.Parent = Me.txtMaodeObra
+        Me.txtMaodeObra.Size = New System.Drawing.Size(90, 24)
+        Me.txtMaodeObra.TabIndex = 17
+        '
+        'txtKmAtual
+        '
+        Me.txtKmAtual.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtKmAtual.DefaultText = ""
+        Me.txtKmAtual.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtKmAtual.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtKmAtual.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtKmAtual.DisabledState.Parent = Me.txtKmAtual
+        Me.txtKmAtual.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtKmAtual.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtKmAtual.FocusedState.Parent = Me.txtKmAtual
+        Me.txtKmAtual.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtKmAtual.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtKmAtual.HoverState.Parent = Me.txtKmAtual
+        Me.txtKmAtual.Location = New System.Drawing.Point(322, 52)
+        Me.txtKmAtual.Name = "txtKmAtual"
+        Me.txtKmAtual.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtKmAtual.PlaceholderText = ""
+        Me.txtKmAtual.SelectedText = ""
+        Me.txtKmAtual.ShadowDecoration.Parent = Me.txtKmAtual
+        Me.txtKmAtual.Size = New System.Drawing.Size(94, 24)
+        Me.txtKmAtual.TabIndex = 18
+        '
+        'Guna2GroupBox3
+        '
+        Me.Guna2GroupBox3.Controls.Add(Me.Guna2HtmlLabel16)
+        Me.Guna2GroupBox3.Controls.Add(Me.txtObs)
+        Me.Guna2GroupBox3.Controls.Add(Me.txtItensManutencao)
+        Me.Guna2GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox3.Location = New System.Drawing.Point(12, 335)
+        Me.Guna2GroupBox3.Name = "Guna2GroupBox3"
+        Me.Guna2GroupBox3.ShadowDecoration.Parent = Me.Guna2GroupBox3
+        Me.Guna2GroupBox3.Size = New System.Drawing.Size(437, 328)
+        Me.Guna2GroupBox3.TabIndex = 40
+        Me.Guna2GroupBox3.Text = "Revisão realizada"
+        '
+        'txtItensManutencao
+        '
+        Me.txtItensManutencao.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtItensManutencao.DefaultText = ""
+        Me.txtItensManutencao.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtItensManutencao.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtItensManutencao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtItensManutencao.DisabledState.Parent = Me.txtItensManutencao
+        Me.txtItensManutencao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtItensManutencao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtItensManutencao.FocusedState.Parent = Me.txtItensManutencao
+        Me.txtItensManutencao.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtItensManutencao.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtItensManutencao.HoverState.Parent = Me.txtItensManutencao
+        Me.txtItensManutencao.Location = New System.Drawing.Point(14, 47)
+        Me.txtItensManutencao.Multiline = True
+        Me.txtItensManutencao.Name = "txtItensManutencao"
+        Me.txtItensManutencao.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtItensManutencao.PlaceholderText = ""
+        Me.txtItensManutencao.SelectedText = ""
+        Me.txtItensManutencao.ShadowDecoration.Parent = Me.txtItensManutencao
+        Me.txtItensManutencao.Size = New System.Drawing.Size(412, 182)
+        Me.txtItensManutencao.TabIndex = 0
         '
         'txtObs
         '
-        Me.txtObs.Location = New System.Drawing.Point(19, 21)
+        Me.txtObs.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtObs.DefaultText = ""
+        Me.txtObs.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtObs.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtObs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtObs.DisabledState.Parent = Me.txtObs
+        Me.txtObs.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtObs.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtObs.FocusedState.Parent = Me.txtObs
+        Me.txtObs.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtObs.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtObs.HoverState.Parent = Me.txtObs
+        Me.txtObs.Location = New System.Drawing.Point(14, 258)
         Me.txtObs.Multiline = True
         Me.txtObs.Name = "txtObs"
-        Me.txtObs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtObs.Size = New System.Drawing.Size(455, 138)
-        Me.txtObs.TabIndex = 6
+        Me.txtObs.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtObs.PlaceholderText = ""
+        Me.txtObs.SelectedText = ""
+        Me.txtObs.ShadowDecoration.Parent = Me.txtObs
+        Me.txtObs.Size = New System.Drawing.Size(412, 54)
+        Me.txtObs.TabIndex = 1
         '
-        'GroupBox3
+        'Guna2HtmlLabel16
         '
-        Me.GroupBox3.Controls.Add(Me.txtObs)
-        Me.GroupBox3.Location = New System.Drawing.Point(14, 484)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(489, 169)
-        Me.GroupBox3.TabIndex = 36
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Observações"
+        Me.Guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel16.Location = New System.Drawing.Point(14, 235)
+        Me.Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
+        Me.Guna2HtmlLabel16.Size = New System.Drawing.Size(70, 17)
+        Me.Guna2HtmlLabel16.TabIndex = 19
+        Me.Guna2HtmlLabel16.Text = "Observações"
         '
-        'GroupBox4
+        'btnSalvar
         '
-        Me.GroupBox4.Controls.Add(Me.txtItensManutencao)
-        Me.GroupBox4.Location = New System.Drawing.Point(13, 233)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(488, 245)
-        Me.GroupBox4.TabIndex = 37
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Descrição"
+        Me.btnSalvar.CheckedState.Parent = Me.btnSalvar
+        Me.btnSalvar.CustomImages.Parent = Me.btnSalvar
+        Me.btnSalvar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalvar.ForeColor = System.Drawing.Color.White
+        Me.btnSalvar.HoverState.Parent = Me.btnSalvar
+        Me.btnSalvar.Location = New System.Drawing.Point(12, 669)
+        Me.btnSalvar.Name = "btnSalvar"
+        Me.btnSalvar.ShadowDecoration.Parent = Me.btnSalvar
+        Me.btnSalvar.Size = New System.Drawing.Size(180, 45)
+        Me.btnSalvar.TabIndex = 41
+        Me.btnSalvar.Text = "Salvar"
         '
-        'Label11
+        'Guna2Button2
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(6, 64)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(106, 13)
-        Me.Label11.TabIndex = 35
-        Me.Label11.Text = "Selecione o Veículo:"
+        Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Location = New System.Drawing.Point(269, 669)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Size = New System.Drawing.Size(180, 45)
+        Me.Guna2Button2.TabIndex = 42
+        Me.Guna2Button2.Text = "Sair"
         '
         'frmServicos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(513, 694)
-        Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnSair)
-        Me.Controls.Add(Me.btnSalvar)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.ClientSize = New System.Drawing.Size(462, 724)
+        Me.Controls.Add(Me.Guna2Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmServicos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Serviços"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
+        Me.Guna2GroupBox1.ResumeLayout(False)
+        Me.Guna2GroupBox1.PerformLayout()
+        Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2GroupBox2.ResumeLayout(False)
+        Me.Guna2GroupBox2.PerformLayout()
+        Me.Guna2GroupBox3.ResumeLayout(False)
+        Me.Guna2GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents txtItensManutencao As TextBox
-    Friend WithEvents txtKm As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents lblNomeCliente As Label
-    Friend WithEvents lblVeiculo As Label
-    Friend WithEvents lblModelo As Label
-    Friend WithEvents lblAno As Label
-    Friend WithEvents btnSalvar As Button
-    Friend WithEvents btnSair As Button
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents lblPlaca As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtMaodeObra As TextBox
-    Friend WithEvents txtObs As TextBox
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents rdbServico As RadioButton
-    Friend WithEvents rdbRevisao As RadioButton
-    Friend WithEvents lblAlerta As Label
-    Friend WithEvents txtKmAtual As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents cmbVeiculos As ComboBox
-    Friend WithEvents Label11 As Label
+    Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents cmbVeiculos As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents lblAno As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPlaca As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblModelo As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblVeiculo As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblNomeCliente As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2GroupBox3 As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents Guna2HtmlLabel16 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents txtObs As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtItensManutencao As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2GroupBox2 As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents txtKmAtual As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtMaodeObra As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel15 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel14 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Label2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents txtKm As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents rdbServico As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents rdbRevisao As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSalvar As Guna.UI2.WinForms.Guna2Button
 End Class
