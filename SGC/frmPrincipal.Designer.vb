@@ -22,153 +22,19 @@ Partial Class frmPrincipal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.CadastroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CadastrarClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BuscarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConfiguraçõesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SairToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BalançoFinanceiroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dgAgendamento = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colData = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEndereço = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTelefone = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNome = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colRemover = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.MenuStrip1.SuspendLayout()
-        CType(Me.dgAgendamento, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel1.SuspendLayout()
+        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroToolStripMenuItem, Me.BuscarToolStripMenuItem, Me.ConfiguraçõesToolStripMenuItem, Me.SairToolStripMenuItem, Me.BalançoFinanceiroToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
-        Me.MenuStrip1.TabIndex = 7
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'CadastroToolStripMenuItem
-        '
-        Me.CadastroToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastrarClientesToolStripMenuItem})
-        Me.CadastroToolStripMenuItem.Name = "CadastroToolStripMenuItem"
-        Me.CadastroToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
-        Me.CadastroToolStripMenuItem.Text = "Cadastro"
-        '
-        'CadastrarClientesToolStripMenuItem
-        '
-        Me.CadastrarClientesToolStripMenuItem.Name = "CadastrarClientesToolStripMenuItem"
-        Me.CadastrarClientesToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
-        Me.CadastrarClientesToolStripMenuItem.Text = "Incluir Cadastro"
-        '
-        'BuscarToolStripMenuItem
-        '
-        Me.BuscarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarClienteToolStripMenuItem})
-        Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
-        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(114, 20)
-        Me.BuscarToolStripMenuItem.Text = "Gerenciar Clientes"
-        '
-        'BuscarClienteToolStripMenuItem
-        '
-        Me.BuscarClienteToolStripMenuItem.Name = "BuscarClienteToolStripMenuItem"
-        Me.BuscarClienteToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.BuscarClienteToolStripMenuItem.Text = "Gerenciar Cadastro"
-        '
-        'ConfiguraçõesToolStripMenuItem
-        '
-        Me.ConfiguraçõesToolStripMenuItem.Name = "ConfiguraçõesToolStripMenuItem"
-        Me.ConfiguraçõesToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
-        Me.ConfiguraçõesToolStripMenuItem.Text = "Configurações"
-        '
-        'SairToolStripMenuItem
-        '
-        Me.SairToolStripMenuItem.Name = "SairToolStripMenuItem"
-        Me.SairToolStripMenuItem.Size = New System.Drawing.Size(38, 20)
-        Me.SairToolStripMenuItem.Text = "Sair"
-        '
-        'BalançoFinanceiroToolStripMenuItem
-        '
-        Me.BalançoFinanceiroToolStripMenuItem.Name = "BalançoFinanceiroToolStripMenuItem"
-        Me.BalançoFinanceiroToolStripMenuItem.Size = New System.Drawing.Size(119, 20)
-        Me.BalançoFinanceiroToolStripMenuItem.Text = "Balanço Financeiro"
-        Me.BalançoFinanceiroToolStripMenuItem.Visible = False
-        '
-        'dgAgendamento
-        '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dgAgendamento.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgAgendamento.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgAgendamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgAgendamento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.colData, Me.colEndereço, Me.colTelefone, Me.colNome, Me.colRemover})
-        Me.dgAgendamento.Location = New System.Drawing.Point(6, 19)
-        Me.dgAgendamento.Name = "dgAgendamento"
-        Me.dgAgendamento.RowTemplate.ReadOnly = True
-        Me.dgAgendamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgAgendamento.Size = New System.Drawing.Size(698, 274)
-        Me.dgAgendamento.TabIndex = 8
-        '
-        'ID
-        '
-        Me.ID.DataPropertyName = "ID"
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.Visible = False
-        '
-        'colData
-        '
-        Me.colData.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.colData.DataPropertyName = "DataHora"
-        Me.colData.HeaderText = "Data / Hora"
-        Me.colData.Name = "colData"
-        '
-        'colEndereço
-        '
-        Me.colEndereço.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.colEndereço.DataPropertyName = "Endereco"
-        Me.colEndereço.HeaderText = "Endereço"
-        Me.colEndereço.Name = "colEndereço"
-        '
-        'colTelefone
-        '
-        Me.colTelefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.colTelefone.DataPropertyName = "Telefone"
-        Me.colTelefone.HeaderText = "Telefone"
-        Me.colTelefone.Name = "colTelefone"
-        '
-        'colNome
-        '
-        Me.colNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.colNome.DataPropertyName = "Nome"
-        Me.colNome.HeaderText = "Nome"
-        Me.colNome.Name = "colNome"
-        '
-        'colRemover
-        '
-        Me.colRemover.HeaderText = "Remover"
-        Me.colRemover.Image = Global.SGC.My.Resources.Resources.remove_outline
-        Me.colRemover.Name = "colRemover"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.dgAgendamento)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 27)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(710, 313)
-        Me.GroupBox1.TabIndex = 9
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Próximo Agendamentos"
         '
         'DataGridViewImageColumn1
         '
@@ -186,27 +52,112 @@ Partial Class frmPrincipal
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Guna2Panel1.Controls.Add(Me.Guna2CirclePictureBox1)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button4)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button3)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
+        Me.Guna2Panel1.ForeColor = System.Drawing.Color.Coral
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(734, 505)
+        Me.Guna2Panel1.TabIndex = 8
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Location = New System.Drawing.Point(28, 60)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Size = New System.Drawing.Size(180, 77)
+        Me.Guna2Button1.TabIndex = 0
+        Me.Guna2Button1.Text = "Cadastro de cliente"
+        '
+        'Guna2Button2
+        '
+        Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Location = New System.Drawing.Point(28, 168)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Size = New System.Drawing.Size(180, 77)
+        Me.Guna2Button2.TabIndex = 1
+        Me.Guna2Button2.Text = "Gerenciar cadastro"
+        '
+        'Guna2Button3
+        '
+        Me.Guna2Button3.CheckedState.Parent = Me.Guna2Button3
+        Me.Guna2Button3.CustomImages.Parent = Me.Guna2Button3
+        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button3.HoverState.Parent = Me.Guna2Button3
+        Me.Guna2Button3.Location = New System.Drawing.Point(28, 275)
+        Me.Guna2Button3.Name = "Guna2Button3"
+        Me.Guna2Button3.ShadowDecoration.Parent = Me.Guna2Button3
+        Me.Guna2Button3.Size = New System.Drawing.Size(180, 77)
+        Me.Guna2Button3.TabIndex = 2
+        Me.Guna2Button3.Text = "Configurações"
+        '
+        'Guna2Button4
+        '
+        Me.Guna2Button4.CheckedState.Parent = Me.Guna2Button4
+        Me.Guna2Button4.CustomImages.Parent = Me.Guna2Button4
+        Me.Guna2Button4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button4.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button4.HoverState.Parent = Me.Guna2Button4
+        Me.Guna2Button4.Location = New System.Drawing.Point(28, 437)
+        Me.Guna2Button4.Name = "Guna2Button4"
+        Me.Guna2Button4.ShadowDecoration.Parent = Me.Guna2Button4
+        Me.Guna2Button4.Size = New System.Drawing.Size(180, 45)
+        Me.Guna2Button4.TabIndex = 3
+        Me.Guna2Button4.Text = "Sair"
+        '
+        'Guna2CirclePictureBox1
+        '
+        Me.Guna2CirclePictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Guna2CirclePictureBox1.BackgroundImage = Global.SGC.My.Resources.Resources.hokkaido_logo_edit
+        Me.Guna2CirclePictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Guna2CirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Guna2CirclePictureBox1.Image = Global.SGC.My.Resources.Resources.hokkaido_logo_edit
+        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(305, 48)
+        Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
+        Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.Guna2CirclePictureBox1.ShadowDecoration.Parent = Me.Guna2CirclePictureBox1
+        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(426, 391)
+        Me.Guna2CirclePictureBox1.TabIndex = 4
+        Me.Guna2CirclePictureBox1.TabStop = False
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 505)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmPrincipal"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Gerenciamento de Clientes - SGP"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        CType(Me.dgAgendamento, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel1.ResumeLayout(False)
+        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents PictureBox1 As PictureBox
@@ -216,15 +167,13 @@ Partial Class frmPrincipal
     Friend WithEvents BuscarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BuscarClienteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SairToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents dgAgendamento As DataGridView
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents colData As DataGridViewTextBoxColumn
-    Friend WithEvents colEndereço As DataGridViewTextBoxColumn
-    Friend WithEvents colTelefone As DataGridViewTextBoxColumn
-    Friend WithEvents colNome As DataGridViewTextBoxColumn
-    Friend WithEvents colRemover As DataGridViewImageColumn
     Friend WithEvents ConfiguraçõesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents BalançoFinanceiroToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
 End Class

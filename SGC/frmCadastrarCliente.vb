@@ -116,7 +116,7 @@ Public Class frmCadastrarCliente
         Me.Close()
     End Sub
 
-    Private Sub btnCarregarImagem_Click(sender As Object, e As EventArgs) 
+    Private Sub btnCarregarImagem_Click(sender As Object, e As EventArgs)
         Dim ImageAUsar As Image
 
         Using OFD As New OpenFileDialog With {.Filter = "Jpg (*.jpg)|*.jpg"}
@@ -129,7 +129,7 @@ Public Class frmCadastrarCliente
     End Sub
 
 
-    Private Sub txtAno_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAno.KeyPress
+    Private Sub txtAno_KeyPress(sender As Object, e As KeyPressEventArgs)
         Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
 
         KeyAscii = CShort(SoNumeros(KeyAscii))
@@ -165,7 +165,7 @@ Public Class frmCadastrarCliente
     '    End If
     'End Sub
 
-    Private Sub txtVeiculo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtVeiculo.KeyPress
+    Private Sub txtVeiculo_KeyPress(sender As Object, e As KeyPressEventArgs)
         Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
 
         KeyAscii = CShort(SoLETRAS(KeyAscii))
@@ -180,4 +180,6 @@ Public Class frmCadastrarCliente
     Private Sub frmCadastrarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtNome.Focus()
     End Sub
+
+
 End Class

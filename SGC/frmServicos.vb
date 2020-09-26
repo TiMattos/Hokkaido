@@ -207,18 +207,19 @@ Public Class frmServicos
             Application.UseWaitCursor = False
             Application.DoEvents()
 
-            lobjFrmVisualizador.ShowDialog()
+            'lobjFrmVisualizador.ShowDialog()
+            crServico.PrintToPrinter(1, 0, 0, 1)
 
             Me.lblAlerta.Text = String.Empty
             Me.lblAlerta.Refresh()
-            If MessageBox.Show("Deseja enviar o relatório de manutenção por email?", "Enviar Email?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                'sbBarraMensagem("ENVIANDO EMAIL, AGURADE...")
-                Me.lblAlerta.Text = "AGUARDE, ENVIANDO EMAIL..."
-                Me.lblAlerta.Refresh()
-                Application.UseWaitCursor = True
-                Application.DoEvents()
-                EnviarEmail(CaminhoArquivoCompleto)
-            End If
+            'If MessageBox.Show("Deseja enviar o relatório de manutenção por email?", "Enviar Email?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            '    'sbBarraMensagem("ENVIANDO EMAIL, AGURADE...")
+            '    Me.lblAlerta.Text = "AGUARDE, ENVIANDO EMAIL..."
+            '    Me.lblAlerta.Refresh()
+            '    Application.UseWaitCursor = True
+            '    Application.DoEvents()
+            '    EnviarEmail(CaminhoArquivoCompleto)
+            'End If
 
             Limpar()
         Catch ex As Exception
