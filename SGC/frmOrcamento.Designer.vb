@@ -20,383 +20,233 @@ Partial Class frmOrcamento
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
-        Me.GroupBox2.SuspendLayout()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.txtCliente = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.txtPecas = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.txtMo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtServicos = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSalvar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Panel1.SuspendLayout()
+        Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(592, 138)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Dados do Proprietário"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.TextBox16)
-        Me.GroupBox2.Controls.Add(Me.TextBox17)
-        Me.GroupBox2.Controls.Add(Me.TextBox18)
-        Me.GroupBox2.Controls.Add(Me.TextBox19)
-        Me.GroupBox2.Controls.Add(Me.TextBox20)
-        Me.GroupBox2.Controls.Add(Me.TextBox21)
-        Me.GroupBox2.Controls.Add(Me.TextBox22)
-        Me.GroupBox2.Controls.Add(Me.TextBox23)
-        Me.GroupBox2.Controls.Add(Me.TextBox24)
-        Me.GroupBox2.Controls.Add(Me.TextBox25)
-        Me.GroupBox2.Controls.Add(Me.TextBox26)
-        Me.GroupBox2.Controls.Add(Me.TextBox27)
-        Me.GroupBox2.Controls.Add(Me.TextBox28)
-        Me.GroupBox2.Controls.Add(Me.TextBox29)
-        Me.GroupBox2.Controls.Add(Me.TextBox30)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.TextBox13)
-        Me.GroupBox2.Controls.Add(Me.TextBox14)
-        Me.GroupBox2.Controls.Add(Me.TextBox15)
-        Me.GroupBox2.Controls.Add(Me.TextBox10)
-        Me.GroupBox2.Controls.Add(Me.TextBox11)
-        Me.GroupBox2.Controls.Add(Me.TextBox12)
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
-        Me.GroupBox2.Controls.Add(Me.TextBox8)
-        Me.GroupBox2.Controls.Add(Me.TextBox9)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 156)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(592, 385)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Orçamento"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 44)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox1.TabIndex = 0
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(369, 44)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 1
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(486, 44)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 2
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(486, 96)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 5
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(369, 96)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 4
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(6, 96)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox6.TabIndex = 3
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(486, 70)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 8
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(369, 70)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox8.TabIndex = 7
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(6, 70)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox9.TabIndex = 6
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(486, 122)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 11
-        '
-        'TextBox11
-        '
-        Me.TextBox11.Location = New System.Drawing.Point(369, 122)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox11.TabIndex = 10
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Location = New System.Drawing.Point(6, 122)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox12.TabIndex = 9
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(486, 148)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox13.TabIndex = 14
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Location = New System.Drawing.Point(369, 148)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox14.TabIndex = 13
-        '
-        'TextBox15
-        '
-        Me.TextBox15.Location = New System.Drawing.Point(6, 148)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox15.TabIndex = 12
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(142, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Descrição"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(403, 16)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(33, 13)
-        Me.Label2.TabIndex = 16
-        Me.Label2.Text = "Qntd."
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(503, 16)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 13)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Valor unitário"
-        '
-        'TextBox16
-        '
-        Me.TextBox16.Location = New System.Drawing.Point(486, 278)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox16.TabIndex = 32
-        '
-        'TextBox17
-        '
-        Me.TextBox17.Location = New System.Drawing.Point(369, 278)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox17.TabIndex = 31
-        '
-        'TextBox18
-        '
-        Me.TextBox18.Location = New System.Drawing.Point(6, 278)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox18.TabIndex = 30
-        '
-        'TextBox19
-        '
-        Me.TextBox19.Location = New System.Drawing.Point(486, 252)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox19.TabIndex = 29
-        '
-        'TextBox20
-        '
-        Me.TextBox20.Location = New System.Drawing.Point(369, 252)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox20.TabIndex = 28
-        '
-        'TextBox21
-        '
-        Me.TextBox21.Location = New System.Drawing.Point(6, 252)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox21.TabIndex = 27
-        '
-        'TextBox22
-        '
-        Me.TextBox22.Location = New System.Drawing.Point(486, 200)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox22.TabIndex = 26
-        '
-        'TextBox23
-        '
-        Me.TextBox23.Location = New System.Drawing.Point(369, 200)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox23.TabIndex = 25
-        '
-        'TextBox24
-        '
-        Me.TextBox24.Location = New System.Drawing.Point(6, 200)
-        Me.TextBox24.Name = "TextBox24"
-        Me.TextBox24.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox24.TabIndex = 24
-        '
-        'TextBox25
-        '
-        Me.TextBox25.Location = New System.Drawing.Point(486, 226)
-        Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox25.TabIndex = 23
-        '
-        'TextBox26
-        '
-        Me.TextBox26.Location = New System.Drawing.Point(369, 226)
-        Me.TextBox26.Name = "TextBox26"
-        Me.TextBox26.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox26.TabIndex = 22
-        '
-        'TextBox27
-        '
-        Me.TextBox27.Location = New System.Drawing.Point(6, 226)
-        Me.TextBox27.Name = "TextBox27"
-        Me.TextBox27.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox27.TabIndex = 21
-        '
-        'TextBox28
-        '
-        Me.TextBox28.Location = New System.Drawing.Point(486, 174)
-        Me.TextBox28.Name = "TextBox28"
-        Me.TextBox28.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox28.TabIndex = 20
-        '
-        'TextBox29
-        '
-        Me.TextBox29.Location = New System.Drawing.Point(369, 174)
-        Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox29.TabIndex = 19
-        '
-        'TextBox30
-        '
-        Me.TextBox30.Location = New System.Drawing.Point(6, 174)
-        Me.TextBox30.Name = "TextBox30"
-        Me.TextBox30.Size = New System.Drawing.Size(345, 20)
-        Me.TextBox30.TabIndex = 18
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Guna2Panel1.Controls.Add(Me.txtCliente)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel2)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2GroupBox1)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
+        Me.Guna2Panel1.Controls.Add(Me.btnSalvar)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(1, 12)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(589, 569)
+        Me.Guna2Panel1.TabIndex = 0
+        '
+        'txtCliente
+        '
+        Me.txtCliente.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtCliente.DefaultText = ""
+        Me.txtCliente.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCliente.DisabledState.Parent = Me.txtCliente
+        Me.txtCliente.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCliente.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCliente.FocusedState.Parent = Me.txtCliente
+        Me.txtCliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtCliente.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCliente.HoverState.Parent = Me.txtCliente
+        Me.txtCliente.Location = New System.Drawing.Point(11, 57)
+        Me.txtCliente.Name = "txtCliente"
+        Me.txtCliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtCliente.PlaceholderText = ""
+        Me.txtCliente.SelectedText = ""
+        Me.txtCliente.ShadowDecoration.Parent = Me.txtCliente
+        Me.txtCliente.Size = New System.Drawing.Size(521, 36)
+        Me.txtCliente.TabIndex = 47
+        '
+        'Guna2HtmlLabel2
+        '
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(11, 36)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(42, 15)
+        Me.Guna2HtmlLabel2.TabIndex = 46
+        Me.Guna2HtmlLabel2.Text = "Cliente"
+        '
+        'Guna2GroupBox1
+        '
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel3)
+        Me.Guna2GroupBox1.Controls.Add(Me.txtPecas)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Guna2GroupBox1.Controls.Add(Me.txtMo)
+        Me.Guna2GroupBox1.Controls.Add(Me.txtServicos)
+        Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox1.Location = New System.Drawing.Point(11, 112)
+        Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
+        Me.Guna2GroupBox1.ShadowDecoration.Parent = Me.Guna2GroupBox1
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(521, 370)
+        Me.Guna2GroupBox1.TabIndex = 45
+        Me.Guna2GroupBox1.Text = "Serviço(s) a ser(em) realizado(s)"
+        '
+        'Guna2HtmlLabel3
+        '
+        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(183, 270)
+        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(111, 23)
+        Me.Guna2HtmlLabel3.TabIndex = 4
+        Me.Guna2HtmlLabel3.Text = "Valor das Peças"
+        '
+        'txtPecas
+        '
+        Me.txtPecas.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPecas.DefaultText = ""
+        Me.txtPecas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPecas.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPecas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPecas.DisabledState.Parent = Me.txtPecas
+        Me.txtPecas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPecas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPecas.FocusedState.Parent = Me.txtPecas
+        Me.txtPecas.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtPecas.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPecas.HoverState.Parent = Me.txtPecas
+        Me.txtPecas.Location = New System.Drawing.Point(300, 270)
+        Me.txtPecas.Name = "txtPecas"
+        Me.txtPecas.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPecas.PlaceholderText = ""
+        Me.txtPecas.SelectedText = ""
+        Me.txtPecas.ShadowDecoration.Parent = Me.txtPecas
+        Me.txtPecas.Size = New System.Drawing.Size(200, 36)
+        Me.txtPecas.TabIndex = 3
+        '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(141, 325)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(153, 23)
+        Me.Guna2HtmlLabel1.TabIndex = 2
+        Me.Guna2HtmlLabel1.Text = "Valor da mão de obra"
+        '
+        'txtMo
+        '
+        Me.txtMo.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtMo.DefaultText = ""
+        Me.txtMo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtMo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtMo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtMo.DisabledState.Parent = Me.txtMo
+        Me.txtMo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtMo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtMo.FocusedState.Parent = Me.txtMo
+        Me.txtMo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtMo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtMo.HoverState.Parent = Me.txtMo
+        Me.txtMo.Location = New System.Drawing.Point(300, 325)
+        Me.txtMo.Name = "txtMo"
+        Me.txtMo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtMo.PlaceholderText = ""
+        Me.txtMo.SelectedText = ""
+        Me.txtMo.ShadowDecoration.Parent = Me.txtMo
+        Me.txtMo.Size = New System.Drawing.Size(200, 36)
+        Me.txtMo.TabIndex = 1
+        '
+        'txtServicos
+        '
+        Me.txtServicos.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtServicos.DefaultText = ""
+        Me.txtServicos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtServicos.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtServicos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtServicos.DisabledState.Parent = Me.txtServicos
+        Me.txtServicos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtServicos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtServicos.FocusedState.Parent = Me.txtServicos
+        Me.txtServicos.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtServicos.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtServicos.HoverState.Parent = Me.txtServicos
+        Me.txtServicos.Location = New System.Drawing.Point(11, 50)
+        Me.txtServicos.Multiline = True
+        Me.txtServicos.Name = "txtServicos"
+        Me.txtServicos.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtServicos.PlaceholderText = ""
+        Me.txtServicos.SelectedText = ""
+        Me.txtServicos.ShadowDecoration.Parent = Me.txtServicos
+        Me.txtServicos.Size = New System.Drawing.Size(489, 214)
+        Me.txtServicos.TabIndex = 0
+        '
+        'Guna2Button2
+        '
+        Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Location = New System.Drawing.Point(352, 488)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Size = New System.Drawing.Size(180, 45)
+        Me.Guna2Button2.TabIndex = 44
+        Me.Guna2Button2.Text = "Sair"
+        '
+        'btnSalvar
+        '
+        Me.btnSalvar.CheckedState.Parent = Me.btnSalvar
+        Me.btnSalvar.CustomImages.Parent = Me.btnSalvar
+        Me.btnSalvar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalvar.ForeColor = System.Drawing.Color.White
+        Me.btnSalvar.HoverState.Parent = Me.btnSalvar
+        Me.btnSalvar.Location = New System.Drawing.Point(11, 488)
+        Me.btnSalvar.Name = "btnSalvar"
+        Me.btnSalvar.ShadowDecoration.Parent = Me.btnSalvar
+        Me.btnSalvar.Size = New System.Drawing.Size(180, 45)
+        Me.btnSalvar.TabIndex = 43
+        Me.btnSalvar.Text = "Imprimir"
         '
         'frmOrcamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(616, 553)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(545, 557)
+        Me.Controls.Add(Me.Guna2Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmOrcamento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Orçamento"
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel1.PerformLayout()
+        Me.Guna2GroupBox1.ResumeLayout(False)
+        Me.Guna2GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox16 As TextBox
-    Friend WithEvents TextBox17 As TextBox
-    Friend WithEvents TextBox18 As TextBox
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents TextBox22 As TextBox
-    Friend WithEvents TextBox23 As TextBox
-    Friend WithEvents TextBox24 As TextBox
-    Friend WithEvents TextBox25 As TextBox
-    Friend WithEvents TextBox26 As TextBox
-    Friend WithEvents TextBox27 As TextBox
-    Friend WithEvents TextBox28 As TextBox
-    Friend WithEvents TextBox29 As TextBox
-    Friend WithEvents TextBox30 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents txtServicos As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSalvar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents txtMo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtCliente As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents txtPecas As Guna.UI2.WinForms.Guna2TextBox
 End Class

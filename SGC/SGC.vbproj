@@ -309,6 +309,11 @@
     <Compile Include="dsHistoricoRevisao.vb">
       <DependentUpon>dsHistoricoRevisao.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsOrcamento.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOrcamento.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsServicos.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -502,6 +507,17 @@
     </None>
     <None Include="dsHistoricoRevisao.xss">
       <DependentUpon>dsHistoricoRevisao.xsd</DependentUpon>
+    </None>
+    <None Include="dsOrcamento.xsc">
+      <DependentUpon>dsOrcamento.xsd</DependentUpon>
+    </None>
+    <None Include="dsOrcamento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOrcamento.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsOrcamento.xss">
+      <DependentUpon>dsOrcamento.xsd</DependentUpon>
     </None>
     <None Include="dsServicos.xsc">
       <DependentUpon>dsServicos.xsd</DependentUpon>
@@ -2032,6 +2048,9 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

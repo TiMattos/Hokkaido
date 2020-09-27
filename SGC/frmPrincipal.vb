@@ -194,4 +194,12 @@ Public Class frmPrincipal
     Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
         Me.Close()
     End Sub
+
+    Private Sub frmOrcamento_Click(sender As Object, e As EventArgs) Handles frmOrcamento.Click
+        Dim frm As frmOrcamento
+
+        frm = New frmOrcamento
+        frm.ShowDialog()
+        frm.Dispose()
+    End Sub
 End Class
