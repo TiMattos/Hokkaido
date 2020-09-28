@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class crHistoricoRevisoes
+Public Class crOrcamentoManual
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class crHistoricoRevisoes
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "crHistoricoRevisoes.rpt"
+            Return "crOrcamentoManual.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class crHistoricoRevisoes
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "SGC.crHistoricoRevisoes.rpt"
+            Return "SGC.crOrcamentoManual.rpt"
         End Get
         Set
             'Do nothing
@@ -94,7 +94,7 @@ Public Class crHistoricoRevisoes
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedcrHistoricoRevisoes
+Public Class CachedcrOrcamentoManual
     Inherits Component
     Implements ICachedReport
     
@@ -136,7 +136,7 @@ Public Class CachedcrHistoricoRevisoes
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As crHistoricoRevisoes = New crHistoricoRevisoes()
+        Dim rpt As crOrcamentoManual = New crOrcamentoManual()
         rpt.Site = Me.Site
         Return rpt
     End Function

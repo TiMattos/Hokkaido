@@ -26,12 +26,13 @@ Partial Class frmPrincipal
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.frmOrcamento = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.frmOrcamento = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,6 +57,7 @@ Partial Class frmPrincipal
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button5)
         Me.Guna2Panel1.Controls.Add(Me.frmOrcamento)
         Me.Guna2Panel1.Controls.Add(Me.Guna2CirclePictureBox1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button4)
@@ -68,6 +70,20 @@ Partial Class frmPrincipal
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(734, 505)
         Me.Guna2Panel1.TabIndex = 8
+        '
+        'frmOrcamento
+        '
+        Me.frmOrcamento.CheckedState.Parent = Me.frmOrcamento
+        Me.frmOrcamento.CustomImages.Parent = Me.frmOrcamento
+        Me.frmOrcamento.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.frmOrcamento.ForeColor = System.Drawing.Color.White
+        Me.frmOrcamento.HoverState.Parent = Me.frmOrcamento
+        Me.frmOrcamento.Location = New System.Drawing.Point(124, 212)
+        Me.frmOrcamento.Name = "frmOrcamento"
+        Me.frmOrcamento.ShadowDecoration.Parent = Me.frmOrcamento
+        Me.frmOrcamento.Size = New System.Drawing.Size(84, 77)
+        Me.frmOrcamento.TabIndex = 5
+        Me.frmOrcamento.Text = "Orçamento digital"
         '
         'Guna2CirclePictureBox1
         '
@@ -140,19 +156,19 @@ Partial Class frmPrincipal
         Me.Guna2Button1.TabIndex = 0
         Me.Guna2Button1.Text = "Cadastro de cliente"
         '
-        'frmOrcamento
+        'Guna2Button5
         '
-        Me.frmOrcamento.CheckedState.Parent = Me.frmOrcamento
-        Me.frmOrcamento.CustomImages.Parent = Me.frmOrcamento
-        Me.frmOrcamento.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.frmOrcamento.ForeColor = System.Drawing.Color.White
-        Me.frmOrcamento.HoverState.Parent = Me.frmOrcamento
-        Me.frmOrcamento.Location = New System.Drawing.Point(28, 212)
-        Me.frmOrcamento.Name = "frmOrcamento"
-        Me.frmOrcamento.ShadowDecoration.Parent = Me.frmOrcamento
-        Me.frmOrcamento.Size = New System.Drawing.Size(180, 77)
-        Me.frmOrcamento.TabIndex = 5
-        Me.frmOrcamento.Text = "Orçamento"
+        Me.Guna2Button5.CheckedState.Parent = Me.Guna2Button5
+        Me.Guna2Button5.CustomImages.Parent = Me.Guna2Button5
+        Me.Guna2Button5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button5.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button5.HoverState.Parent = Me.Guna2Button5
+        Me.Guna2Button5.Location = New System.Drawing.Point(28, 212)
+        Me.Guna2Button5.Name = "Guna2Button5"
+        Me.Guna2Button5.ShadowDecoration.Parent = Me.Guna2Button5
+        Me.Guna2Button5.Size = New System.Drawing.Size(84, 77)
+        Me.Guna2Button5.TabIndex = 6
+        Me.Guna2Button5.Text = "Folha de orçamento"
         '
         'frmPrincipal
         '
@@ -193,4 +209,5 @@ Partial Class frmPrincipal
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents frmOrcamento As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button5 As Guna.UI2.WinForms.Guna2Button
 End Class

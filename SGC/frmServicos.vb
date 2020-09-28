@@ -451,4 +451,40 @@ Public Class frmServicos
         End Try
 
     End Sub
+
+    Private Sub TxtKmAtual_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles txtKmAtual.KeyPress
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        KeyAscii = CShort(SoNumeros(KeyAscii))
+
+        If KeyAscii = 0 Then
+
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub TxtMaodeObra_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles txtMaodeObra.KeyPress
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        KeyAscii = CShort(SoNumeros(KeyAscii))
+
+        If KeyAscii = 0 Then
+
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub TxtKm_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKm.KeyPress
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        KeyAscii = CShort(SoNumeros(KeyAscii))
+
+        If KeyAscii = 0 Then
+
+            e.Handled = True
+
+        End If
+    End Sub
 End Class

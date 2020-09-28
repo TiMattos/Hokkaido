@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmOrcamento
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -33,6 +33,7 @@ Partial Class frmOrcamento
         Me.txtServicos = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.btnSalvar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -87,6 +88,7 @@ Partial Class frmOrcamento
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2Button1)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel3)
         Me.Guna2GroupBox1.Controls.Add(Me.txtPecas)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel1)
@@ -220,6 +222,22 @@ Partial Class frmOrcamento
         Me.btnSalvar.TabIndex = 43
         Me.btnSalvar.Text = "Imprimir"
         '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.BackgroundImage = Global.SGC.My.Resources.Resources.calculadora
+        Me.Guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
+        Me.Guna2Button1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Location = New System.Drawing.Point(11, 270)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Size = New System.Drawing.Size(65, 88)
+        Me.Guna2Button1.TabIndex = 48
+        '
         'frmOrcamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -249,4 +267,5 @@ Partial Class frmOrcamento
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents txtPecas As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 End Class

@@ -17,7 +17,7 @@ Partial Class frmViewer
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmViewer))
         Me.crVisualizador = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
@@ -31,16 +31,14 @@ Partial Class frmViewer
         Me.crVisualizador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.crVisualizador.Location = New System.Drawing.Point(0, 0)
         Me.crVisualizador.Name = "crVisualizador"
-        Me.crVisualizador.SelectionFormula = ""
-        Me.crVisualizador.Size = New System.Drawing.Size(985, 750)
+        Me.crVisualizador.Size = New System.Drawing.Size(985, 749)
         Me.crVisualizador.TabIndex = 0
-        Me.crVisualizador.ViewTimeSelectionFormula = ""
         '
         'frmViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(985, 750)
+        Me.ClientSize = New System.Drawing.Size(985, 749)
         Me.Controls.Add(Me.crVisualizador)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -54,6 +52,6 @@ Partial Class frmViewer
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents crVisualizador As CrystalDecisions.Windows.Forms.CrystalReportViewer
 
+    Public WithEvents crVisualizador As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

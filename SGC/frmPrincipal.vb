@@ -14,8 +14,8 @@ Imports System.Threading
 Imports System.Threading.Tasks
 
 Public Class frmPrincipal
-    Shared Scopes As String() = {CalendarService.Scope.Calendar}
-    Shared ApplicationName As String = "Google Calendar API .NET Quickstart"
+    'Shared Scopes As String() = {CalendarService.Scope.Calendar}
+    'Shared ApplicationName As String = "Google Calendar API .NET Quickstart"
 
     Private Sub btnCadastrarClientes_Click(sender As Object, e As EventArgs)
         Dim frm As frmCadastrarCliente
@@ -201,5 +201,14 @@ Public Class frmPrincipal
         frm = New frmOrcamento
         frm.ShowDialog()
         frm.Dispose()
+    End Sub
+
+    Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
+        Dim frm As New frmViewer()
+        Dim cr As New crOrcamentoManual
+
+        frm.crVisualizador.ReportSource = cr
+        frm.ShowDialog()
+
     End Sub
 End Class
