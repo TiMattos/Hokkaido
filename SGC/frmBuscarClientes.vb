@@ -136,7 +136,7 @@ Public Class frmBuscarClientes
     End Sub
 
     Private Sub frmBuscarClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.cmbFiltroCliente.SelectedIndex = 1
+        Me.cmbFiltroCliente.SelectedIndex = 0
         Me.txtFiltroCliente.Focus()
 
     End Sub
@@ -196,5 +196,84 @@ Public Class frmBuscarClientes
         frm4 = New frmAgendamento(objBLL.busObterClientePorID(id))
         frm4.ShowDialog()
         frm4.Dispose()
+    End Sub
+
+    Private Sub GrdCliente_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles grdCliente.CellContentClick
+        Dim ID As Integer
+        'If btnVisualizar.Selected Then
+        '    ID = grdCliente.CurrentRow.Cells(0).Value
+        'End If
+        Dim frm As frmExibeDadosCadastro
+        Dim frm2 As frmServicos
+        Dim frm3 As frmHistoricoRevisao
+        Dim frm4 As frmAgendamento
+        Dim objBLL As BLLCLientes
+        'Dim objBllServico As BLLServicos
+
+        Try
+
+
+            If e.RowIndex >= 0 AndAlso e.ColumnIndex = 4 Then
+                With DirectCast(grdCliente(e.ColumnIndex, e.RowIndex), DataGridViewButtonCell)
+                    If .Value Is Nothing Then
+                        ID = grdCliente.CurrentRow.Cells(0).Value
+                        objBLL = New BLLCLientes
+                        frm = New frmExibeDadosCadastro(objBLL.busObterClientePorID(ID))
+                        frm.ShowDialog()
+                        frm.Dispose()
+
+                    Else
+
+                    End If
+                End With
+
+            End If
+
+            If e.RowIndex >= 0 AndAlso e.ColumnIndex = 5 Then
+                With DirectCast(grdCliente(e.ColumnIndex, e.RowIndex), DataGridViewButtonCell)
+                    If .Value Is Nothing Then
+                        ID = grdCliente.CurrentRow.Cells(0).Value
+                        objBLL = New BLLCLientes
+                        frm2 = New frmServicos(objBLL.busObterClientePorID(ID))
+                        frm2.ShowDialog()
+                        frm2.Dispose()
+
+                    Else
+
+                    End If
+                End With
+
+            End If
+
+            If e.RowIndex >= 0 AndAlso e.ColumnIndex = 6 Then
+                With DirectCast(grdCliente(e.ColumnIndex, e.RowIndex), DataGridViewButtonCell)
+                    If .Value Is Nothing Then
+                        ID = grdCliente.CurrentRow.Cells(0).Value
+
+                        objBLL = New BLLCLientes
+                        frm3 = New frmHistoricoRevisao(objBLL.busObterClientePorID(ID))
+                        frm3.ShowDialog()
+                        frm3.Dispose()
+                    End If
+                End With
+            End If
+
+            If e.RowIndex >= 0 AndAlso e.ColumnIndex = 7 Then
+                With DirectCast(grdCliente(e.ColumnIndex, e.RowIndex), DataGridViewButtonCell)
+                    If .Value Is Nothing Then
+                        ID = grdCliente.CurrentRow.Cells(0).Value
+
+                        objBLL = New BLLCLientes
+                        frm4 = New frmAgendamento(objBLL.busObterClientePorID(ID))
+                        frm4.ShowDialog()
+                        frm4.Dispose()
+                    End If
+                End With
+            End If
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+
     End Sub
 End Class

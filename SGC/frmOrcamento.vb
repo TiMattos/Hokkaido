@@ -19,8 +19,8 @@ Public Class frmOrcamento
             obj = New Object(3) {}
             obj.SetValue(txtCliente.Text, 2)
             obj.SetValue(txtServicos.Text, 0)
-            obj.SetValue(txtPecas.Text, 3)
-            obj.SetValue(txtMo.Text, 1)
+            obj.SetValue(IIf(txtPecas.Text = String.Empty, 0, txtPecas.Text), 3)
+            obj.SetValue(IIf(txtMo.Text = String.Empty, 0, txtMo.Text), 1)
 
             dsRelOracamento.orcamento.Rows.Add(obj)
             obj = Nothing
