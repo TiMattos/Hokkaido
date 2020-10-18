@@ -27,6 +27,10 @@ Partial Class frmBuscarClientes
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuscarClientes))
         Me.grdCliente = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nome1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Endereco = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Placa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnSair = New Guna.UI2.WinForms.Guna2Button()
         Me.btnAgendaServico = New Guna.UI2.WinForms.Guna2Button()
@@ -38,10 +42,6 @@ Partial Class frmBuscarClientes
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.cmbFiltroCliente = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.txtFiltroCliente = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nome1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Endereco = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Placa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.grdCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2GroupBox1.SuspendLayout()
@@ -77,6 +77,7 @@ Partial Class frmBuscarClientes
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.grdCliente.DefaultCellStyle = DataGridViewCellStyle3
+        Me.grdCliente.EnableHeadersVisualStyles = False
         Me.grdCliente.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdCliente.Location = New System.Drawing.Point(15, 235)
         Me.grdCliente.Name = "grdCliente"
@@ -108,6 +109,36 @@ Partial Class frmBuscarClientes
         Me.grdCliente.ThemeStyle.RowsStyle.Height = 22
         Me.grdCliente.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdCliente.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'ID
+        '
+        Me.ID.DataPropertyName = "ID"
+        Me.ID.HeaderText = "id"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Visible = False
+        '
+        'Nome1
+        '
+        Me.Nome1.DataPropertyName = "Nome1"
+        Me.Nome1.HeaderText = "Nome"
+        Me.Nome1.Name = "Nome1"
+        Me.Nome1.ReadOnly = True
+        '
+        'Endereco
+        '
+        Me.Endereco.DataPropertyName = "Endereco"
+        Me.Endereco.HeaderText = "Endereço"
+        Me.Endereco.Name = "Endereco"
+        Me.Endereco.ReadOnly = True
+        '
+        'Placa
+        '
+        Me.Placa.DataPropertyName = "Placa"
+        Me.Placa.HeaderText = "Placa"
+        Me.Placa.Name = "Placa"
+        Me.Placa.ReadOnly = True
+        Me.Placa.Visible = False
         '
         'Guna2Panel1
         '
@@ -269,51 +300,22 @@ Partial Class frmBuscarClientes
         Me.txtFiltroCliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtFiltroCliente.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFiltroCliente.HoverState.Parent = Me.txtFiltroCliente
-        Me.txtFiltroCliente.Location = New System.Drawing.Point(24, 133)
+        Me.txtFiltroCliente.Location = New System.Drawing.Point(27, 133)
         Me.txtFiltroCliente.Name = "txtFiltroCliente"
         Me.txtFiltroCliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtFiltroCliente.PlaceholderText = ""
         Me.txtFiltroCliente.SelectedText = ""
         Me.txtFiltroCliente.ShadowDecoration.Parent = Me.txtFiltroCliente
-        Me.txtFiltroCliente.Size = New System.Drawing.Size(379, 36)
+        Me.txtFiltroCliente.Size = New System.Drawing.Size(376, 36)
         Me.txtFiltroCliente.TabIndex = 0
-        '
-        'ID
-        '
-        Me.ID.DataPropertyName = "ID"
-        Me.ID.HeaderText = "id"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Visible = False
-        '
-        'Nome1
-        '
-        Me.Nome1.DataPropertyName = "Nome1"
-        Me.Nome1.HeaderText = "Nome"
-        Me.Nome1.Name = "Nome1"
-        Me.Nome1.ReadOnly = True
-        '
-        'Endereco
-        '
-        Me.Endereco.DataPropertyName = "Endereco"
-        Me.Endereco.HeaderText = "Endereço"
-        Me.Endereco.Name = "Endereco"
-        Me.Endereco.ReadOnly = True
-        '
-        'Placa
-        '
-        Me.Placa.DataPropertyName = "Placa"
-        Me.Placa.HeaderText = "Placa"
-        Me.Placa.Name = "Placa"
-        Me.Placa.ReadOnly = True
         '
         'frmBuscarClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(727, 541)
+        Me.ClientSize = New System.Drawing.Size(715, 541)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False

@@ -2,6 +2,15 @@
 Imports BLL
 
 Public Class frmBuscarClientes
+
+    Sub New()
+
+        ' Esta chamada é requerida pelo designer.
+        InitializeComponent()
+
+        ' Adicione qualquer inicialização após a chamada InitializeComponent().
+
+    End Sub
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Try
             BuscarCliente()
@@ -135,9 +144,12 @@ Public Class frmBuscarClientes
         btnRealizarServico.Enabled = Habilita
     End Sub
 
-    Private Sub frmBuscarClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmBuscarClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        txtFiltroCliente.Focus()
+
         Me.cmbFiltroCliente.SelectedIndex = 0
-        Me.txtFiltroCliente.Focus()
+
 
     End Sub
 

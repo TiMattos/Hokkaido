@@ -136,7 +136,7 @@ Public Class frmExibeDadosCadastro
             btnSalvar.Enabled = True
             mBolHabilitaCampos = True
             btnAlterar.Text = "Desabilitar campos"
-            btnAlterar.TextAlign = ContentAlignment.MiddleRight
+            'btnAlterar.TextAlign = ContentAlignment.MiddleRight
 
         Else
             txtNome.Enabled = False
@@ -148,11 +148,9 @@ Public Class frmExibeDadosCadastro
             btnSalvar.Enabled = False
             mBolHabilitaCampos = False
             btnAlterar.Text = "Habilitar campos"
-            btnAlterar.TextAlign = ContentAlignment.MiddleRight
+            ' btnAlterar.TextAlign = ContentAlignment.MiddleRight
 
         End If
-
-
 
     End Sub
 
