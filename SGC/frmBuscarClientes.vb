@@ -147,8 +147,10 @@ Public Class frmBuscarClientes
     Private Sub FrmBuscarClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         txtFiltroCliente.Focus()
+        txtFiltroCliente.Select()
 
         Me.cmbFiltroCliente.SelectedIndex = 0
+
 
 
     End Sub
@@ -161,7 +163,10 @@ Public Class frmBuscarClientes
         Dim objBLL As BLLCLientes
         Dim frm As frmExibeDadosCadastro
         Dim id As Integer
-
+        If IsNothing(grdCliente.CurrentRow) Then
+            MessageBox.Show("Selecione um cliente para visualizar o cadastro.")
+            Exit Sub
+        End If
         id = grdCliente.CurrentRow.Cells(0).Value
         objBLL = New BLLCLientes
         frm = New frmExibeDadosCadastro(objBLL.busObterClientePorID(id))
@@ -175,7 +180,10 @@ Public Class frmBuscarClientes
         Dim objBLL As BLLCLientes
         Dim id As Integer
         Dim frm2 As frmServicos
-
+        If IsNothing(grdCliente.CurrentRow) Then
+            MessageBox.Show("Selecione um cliente para realizar um serviço.")
+            Exit Sub
+        End If
         id = grdCliente.CurrentRow.Cells(0).Value
         objBLL = New BLLCLientes
         frm2 = New frmServicos(objBLL.busObterClientePorID(id))
@@ -188,7 +196,10 @@ Public Class frmBuscarClientes
         Dim id As Integer
         Dim objBLL As BLLCLientes
         Dim frm3 As frmHistoricoRevisao
-
+        If IsNothing(grdCliente.CurrentRow) Then
+            MessageBox.Show("Selecione um cliente para visualizar o histórico de revisões.")
+            Exit Sub
+        End If
         id = grdCliente.CurrentRow.Cells(0).Value
 
         objBLL = New BLLCLientes
@@ -201,7 +212,10 @@ Public Class frmBuscarClientes
         Dim id As Integer
         Dim objBLL As BLLCLientes
         Dim frm4 As frmAgendamento
-
+        If IsNothing(grdCliente.CurrentRow) Then
+            MessageBox.Show("Selecione um cliente para agendar um serviço.")
+            Exit Sub
+        End If
         id = grdCliente.CurrentRow.Cells(0).Value
 
         objBLL = New BLLCLientes

@@ -183,6 +183,7 @@ Partial Class frmBuscarClientes
         Me.btnAgendaServico.Size = New System.Drawing.Size(180, 45)
         Me.btnAgendaServico.TabIndex = 12
         Me.btnAgendaServico.Text = "Agendar Serviço"
+        Me.btnAgendaServico.Visible = False
         '
         'btnHistoricoRevisao
         '
@@ -268,6 +269,7 @@ Partial Class frmBuscarClientes
         '
         'cmbFiltroCliente
         '
+        Me.cmbFiltroCliente.Animated = True
         Me.cmbFiltroCliente.BackColor = System.Drawing.Color.Transparent
         Me.cmbFiltroCliente.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cmbFiltroCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList

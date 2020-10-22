@@ -119,11 +119,18 @@ Public Class frmServicos
             objInfoServicos.IdCliente = mObjCliente.ID
             objInfoServicos.Nome = mObjCliente.Nome1.ToUpper
             objInfoServicos.Veiculo = lblModelo.Text.ToUpper
-            valorMO = txtMaodeObra.Text.Trim.ToUpper
+            If Not txtMaodeObra.Text = String.Empty Then
+                valorMO = txtMaodeObra.Text.Trim.ToUpper
+            Else
+                valorMO = 0
+            End If
+
             objInfoServicos.MaodeObra = valorMO.ToString("C").ToUpper
             objInfoServicos.Observacao = txtObs.Text.Trim.Replace("" & vbCrLf & "", "/").ToUpper
             If Not txtKmAtual.Text = String.Empty Then
                 objInfoServicos.KmAtual = CInt(txtKmAtual.Text.Trim.ToUpper)
+            Else
+                objInfoServicos.KmAtual = 0
             End If
             objInfoServicos.Placa = lblPlaca.Text.ToUpper
 

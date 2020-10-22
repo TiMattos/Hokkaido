@@ -40,10 +40,12 @@ Partial Class frmHistoricoRevisao
         Me.btnSair = New System.Windows.Forms.Button()
         Me.lblAlerta = New System.Windows.Forms.Label()
         Me.btnEnviarEmail = New System.Windows.Forms.Button()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.grdRevisoesRealizados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServicosRealizados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'grdRevisoesRealizados
@@ -131,7 +133,7 @@ Partial Class frmHistoricoRevisao
         '
         Me.btnImprimir.Image = Global.SGC.My.Resources.Resources.search
         Me.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImprimir.Location = New System.Drawing.Point(500, 297)
+        Me.btnImprimir.Location = New System.Drawing.Point(506, 314)
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(123, 27)
         Me.btnImprimir.TabIndex = 6
@@ -189,6 +191,17 @@ Partial Class frmHistoricoRevisao
         Me.btnEnviarEmail.Text = "Enviar histórico por Email"
         Me.btnEnviarEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnEnviarEmail.UseVisualStyleBackColor = True
+        Me.btnEnviarEmail.Visible = False
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.Controls.Add(Me.btnImprimir)
+        Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, -17)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(639, 640)
+        Me.Guna2Panel1.TabIndex = 13
         '
         'frmHistoricoRevisao
         '
@@ -200,8 +213,8 @@ Partial Class frmHistoricoRevisao
         Me.Controls.Add(Me.btnSair)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnImprimir)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Controls.Add(Me.Guna2Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -212,6 +225,7 @@ Partial Class frmHistoricoRevisao
         CType(Me.dgvServicosRealizados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
+        Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -233,4 +247,5 @@ Partial Class frmHistoricoRevisao
     Friend WithEvents btnSair As Button
     Friend WithEvents lblAlerta As Label
     Friend WithEvents btnEnviarEmail As Button
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
 End Class
