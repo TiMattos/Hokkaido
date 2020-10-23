@@ -179,6 +179,7 @@ Public Class frmCadastrarCliente
 
     Private Sub frmCadastrarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtNome.Focus()
+        txtNome.Select()
     End Sub
 
 

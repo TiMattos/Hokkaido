@@ -99,7 +99,7 @@ Partial Class frmServicos
         Me.cmbVeiculos.Name = "cmbVeiculos"
         Me.cmbVeiculos.ShadowDecoration.Parent = Me.cmbVeiculos
         Me.cmbVeiculos.Size = New System.Drawing.Size(197, 36)
-        Me.cmbVeiculos.TabIndex = 11
+        Me.cmbVeiculos.TabIndex = 1
         '
         'lblAno
         '
@@ -227,7 +227,7 @@ Partial Class frmServicos
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
         Me.Guna2Button2.Size = New System.Drawing.Size(180, 45)
-        Me.Guna2Button2.TabIndex = 42
+        Me.Guna2Button2.TabIndex = 10
         Me.Guna2Button2.Text = "Sair"
         '
         'btnSalvar
@@ -241,7 +241,7 @@ Partial Class frmServicos
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.ShadowDecoration.Parent = Me.btnSalvar
         Me.btnSalvar.Size = New System.Drawing.Size(180, 45)
-        Me.btnSalvar.TabIndex = 41
+        Me.btnSalvar.TabIndex = 9
         Me.btnSalvar.Text = "Salvar"
         '
         'Guna2GroupBox3
@@ -289,7 +289,7 @@ Partial Class frmServicos
         Me.txtObs.SelectedText = ""
         Me.txtObs.ShadowDecoration.Parent = Me.txtObs
         Me.txtObs.Size = New System.Drawing.Size(412, 54)
-        Me.txtObs.TabIndex = 1
+        Me.txtObs.TabIndex = 8
         '
         'txtItensManutencao
         '
@@ -313,7 +313,7 @@ Partial Class frmServicos
         Me.txtItensManutencao.SelectedText = ""
         Me.txtItensManutencao.ShadowDecoration.Parent = Me.txtItensManutencao
         Me.txtItensManutencao.Size = New System.Drawing.Size(412, 182)
-        Me.txtItensManutencao.TabIndex = 0
+        Me.txtItensManutencao.TabIndex = 7
         '
         'Guna2GroupBox2
         '
@@ -356,7 +356,7 @@ Partial Class frmServicos
         Me.txtKmAtual.SelectedText = ""
         Me.txtKmAtual.ShadowDecoration.Parent = Me.txtKmAtual
         Me.txtKmAtual.Size = New System.Drawing.Size(94, 24)
-        Me.txtKmAtual.TabIndex = 18
+        Me.txtKmAtual.TabIndex = 4
         '
         'txtMaodeObra
         '
@@ -379,7 +379,7 @@ Partial Class frmServicos
         Me.txtMaodeObra.SelectedText = ""
         Me.txtMaodeObra.ShadowDecoration.Parent = Me.txtMaodeObra
         Me.txtMaodeObra.Size = New System.Drawing.Size(94, 24)
-        Me.txtMaodeObra.TabIndex = 17
+        Me.txtMaodeObra.TabIndex = 6
         '
         'Guna2HtmlLabel15
         '
@@ -429,7 +429,7 @@ Partial Class frmServicos
         Me.txtKm.SelectedText = ""
         Me.txtKm.ShadowDecoration.Parent = Me.txtKm
         Me.txtKm.Size = New System.Drawing.Size(74, 24)
-        Me.txtKm.TabIndex = 13
+        Me.txtKm.TabIndex = 5
         '
         'Label1
         '
@@ -452,7 +452,7 @@ Partial Class frmServicos
         Me.rdbServico.Location = New System.Drawing.Point(99, 57)
         Me.rdbServico.Name = "rdbServico"
         Me.rdbServico.Size = New System.Drawing.Size(63, 19)
-        Me.rdbServico.TabIndex = 1
+        Me.rdbServico.TabIndex = 3
         Me.rdbServico.Text = "Serviço"
         Me.rdbServico.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.rdbServico.UncheckedState.BorderThickness = 2
@@ -472,7 +472,7 @@ Partial Class frmServicos
         Me.rdbRevisao.Location = New System.Drawing.Point(19, 57)
         Me.rdbRevisao.Name = "rdbRevisao"
         Me.rdbRevisao.Size = New System.Drawing.Size(65, 19)
-        Me.rdbRevisao.TabIndex = 0
+        Me.rdbRevisao.TabIndex = 2
         Me.rdbRevisao.Text = "Revisão"
         Me.rdbRevisao.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.rdbRevisao.UncheckedState.BorderThickness = 2
