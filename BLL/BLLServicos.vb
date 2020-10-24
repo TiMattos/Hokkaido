@@ -40,7 +40,7 @@ Public Class BLLServicos
 
     End Function
 
-    Public Function busObterServicosPorData(ByVal pDataInicio As Date, ByVal pDataFinal As Date) As List(Of ServicoINFO)
+    Public Function busObterServicosPorData(ByVal pDataInicio As String, ByVal pDataFinal As String) As List(Of ServicoINFO)
         Dim DAL As DALServicos
 
         Try

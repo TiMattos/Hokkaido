@@ -226,7 +226,7 @@ Public Class DALServicos
         End Try
     End Function
 
-    Public Function dbObterServicoPorData(ByVal pDataInicio As Date, ByVal pDataFim As Date) As List(Of ServicoINFO)
+    Public Function dbObterServicoPorData(ByVal pDataInicio As String, ByVal pDataFim As String) As List(Of ServicoINFO)
         Dim strSQL As String
         Dim objReader As FbDataReader
         Dim conn As FbCommand
@@ -254,8 +254,8 @@ Public Class DALServicos
                     "ASS_INT_NR_KMATUAL,  " &
                     "ASS_STR_DS_PLACA  " &
                     "FROM tbl_servicos " &
-                    "WHERE ASS_DAT_DT_DATAREVISAO between '" & pDataInicio.date & "' and '" & pDataFim.date & "'" &
-                    " ORDER BY ASS_INT_NR_QUILOMETRAGEM, ASS_DAT_DT_DATAREVISAO DESC"
+                    "WHERE ASS_DAT_DT_DATAREVISAO between '" & pDataInicio & "' and '" & pDataFim & "'" &
+                    " ORDER BY ASS_DAT_DT_DATAREVISAO DESC"
 
 
 
@@ -307,6 +307,8 @@ Public Class DALServicos
                     Else
                         .ValorPecas = String.Empty
                     End If
+                    Dim objDalCliente As New DalCliente
+                    .Nome = objDalCliente.dbObterClientePorID(.IdCliente).Nome1
 
                 End With
                 lLstServico.Add(objInfo)
