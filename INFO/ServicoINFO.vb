@@ -13,6 +13,8 @@
     Private Property _caminhoArquivo As String
     Private Property _placa As String
 
+    Private Property _ValorPecas As String
+
     Public Property Placa As String
         Get
             Return _placa
@@ -124,6 +126,16 @@
         End Get
         Set(value As String)
             _caminhoArquivo = value
+        End Set
+    End Property
+
+    Public Property ValorPecas As String
+        Get
+            Return _ValorPecas
+
+        End Get
+        Set(value As String)
+            _ValorPecas = value
         End Set
     End Property
 End Class

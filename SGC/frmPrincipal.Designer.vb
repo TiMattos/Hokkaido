@@ -33,6 +33,7 @@ Partial Class frmPrincipal
         Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnBalancoFinanceiro = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +58,7 @@ Partial Class frmPrincipal
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Guna2Panel1.Controls.Add(Me.btnBalancoFinanceiro)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button5)
         Me.Guna2Panel1.Controls.Add(Me.frmOrcamento)
         Me.Guna2Panel1.Controls.Add(Me.Guna2CirclePictureBox1)
@@ -135,7 +137,7 @@ Partial Class frmPrincipal
         Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button3.ForeColor = System.Drawing.Color.White
         Me.Guna2Button3.HoverState.Parent = Me.Guna2Button3
-        Me.Guna2Button3.Location = New System.Drawing.Point(28, 335)
+        Me.Guna2Button3.Location = New System.Drawing.Point(233, 390)
         Me.Guna2Button3.Name = "Guna2Button3"
         Me.Guna2Button3.ShadowDecoration.Parent = Me.Guna2Button3
         Me.Guna2Button3.Size = New System.Drawing.Size(180, 77)
@@ -170,6 +172,20 @@ Partial Class frmPrincipal
         Me.Guna2Button1.Size = New System.Drawing.Size(180, 77)
         Me.Guna2Button1.TabIndex = 0
         Me.Guna2Button1.Text = "Cadastro de cliente"
+        '
+        'btnBalancoFinanceiro
+        '
+        Me.btnBalancoFinanceiro.CheckedState.Parent = Me.btnBalancoFinanceiro
+        Me.btnBalancoFinanceiro.CustomImages.Parent = Me.btnBalancoFinanceiro
+        Me.btnBalancoFinanceiro.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBalancoFinanceiro.ForeColor = System.Drawing.Color.White
+        Me.btnBalancoFinanceiro.HoverState.Parent = Me.btnBalancoFinanceiro
+        Me.btnBalancoFinanceiro.Location = New System.Drawing.Point(28, 342)
+        Me.btnBalancoFinanceiro.Name = "btnBalancoFinanceiro"
+        Me.btnBalancoFinanceiro.ShadowDecoration.Parent = Me.btnBalancoFinanceiro
+        Me.btnBalancoFinanceiro.Size = New System.Drawing.Size(180, 77)
+        Me.btnBalancoFinanceiro.TabIndex = 7
+        Me.btnBalancoFinanceiro.Text = "Balanço Financeiro"
         '
         'frmPrincipal
         '
@@ -211,4 +227,5 @@ Partial Class frmPrincipal
     Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents frmOrcamento As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button5 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnBalancoFinanceiro As Guna.UI2.WinForms.Guna2Button
 End Class

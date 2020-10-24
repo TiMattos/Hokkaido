@@ -39,4 +39,17 @@ Public Class BLLServicos
         End Try
 
     End Function
+
+    Public Function busObterServicosPorData(ByVal pDataInicio As Date, ByVal pDataFinal As Date) As List(Of ServicoINFO)
+        Dim DAL As DALServicos
+
+        Try
+            DAL = New DALServicos
+
+            Return DAL.dbObterServicoPorData(pDataInicio, pDataFinal)
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Function
 End Class

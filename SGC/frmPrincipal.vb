@@ -211,4 +211,15 @@ Public Class frmPrincipal
         frm.ShowDialog()
 
     End Sub
+
+    Private Sub BtnBalancoFinanceiro_Click(sender As Object, e As EventArgs) Handles btnBalancoFinanceiro.Click
+        Dim frm As New frmExibeBalancoFinanceiro
+        Try
+            frm.ShowDialog()
+            frm.Dispose()
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 End Class
