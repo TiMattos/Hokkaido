@@ -8,6 +8,7 @@ Public Class frmExibeBalancoFinanceiro
     End Sub
     Private Sub CarregarTela()
         rdbPeriodo.Checked = True
+        rdbPeriodo.Select()
         lblTexto1.Text = "De"
         lblTexto2.Text = "Até"
         cmbMes.Visible = False
@@ -83,8 +84,36 @@ Public Class frmExibeBalancoFinanceiro
             lblTexto2.Text = "Até"
             cmbMes.Visible = False
             cmbAno.Visible = False
+            tmpDataInicio.Visible = True
+            tmpDataFim.Visible = True
+        ElseIf rdbMesAno.Checked Then
+            lblTexto1.Text = "Mês"
+            lblTexto2.Text = "Ano"
+            cmbMes.Visible = True
+            cmbAno.Visible = True
+            tmpDataInicio.Visible = False
+            tmpDataFim.Visible = False
 
         End If
 
+    End Sub
+
+    Private Sub RdbMesAno_CheckedChanged(sender As Object, e As EventArgs) Handles rdbMesAno.CheckedChanged
+        If rdbPeriodo.Checked Then
+            lblTexto1.Text = "De"
+            lblTexto2.Text = "Até"
+            cmbMes.Visible = False
+            cmbAno.Visible = False
+            tmpDataInicio.Visible = True
+            tmpDataFim.Visible = True
+        ElseIf rdbMesAno.Checked Then
+            lblTexto1.Text = "Mês"
+            lblTexto2.Text = "Ano"
+            cmbMes.Visible = True
+            cmbAno.Visible = True
+            tmpDataInicio.Visible = False
+            tmpDataFim.Visible = False
+
+        End If
     End Sub
 End Class
