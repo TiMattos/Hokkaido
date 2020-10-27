@@ -318,4 +318,89 @@ Public Class DALServicos
             Throw ex
         End Try
     End Function
+
+    Public Function dbObterServicosComparativo(ByVal pDataInicio As String, ByVal pDataFim As String) As List(Of ServicoINFO)
+        Dim strSQL As String
+        Dim objReader As FbDataReader
+        Dim conn As FbCommand
+        Dim objInfo As ServicoINFO
+        Dim lLstServico As List(Of ServicoINFO)
+
+        Try
+
+            AbrirConexao()
+
+            'strSQL = "SELECT C.ass_int_id_cliente,  C.ass_str_ds_nome1 , C.ass_str_ds_endereco , S.ass_str_ds_servicorealizado, " &
+            '        " S.ass_dat_dt_datarevisao , S.ass_int_nr_quilometragem , S.ass_str_nr_maodeobra , S.ass_str_ds_obs FROM tbl_servicos  S " &
+            '        " INNER JOIN tbl_cliente C On C.ass_int_id_cliente = S.ass_int_id_cliente " &
+            '        " where C.ass_str_ds_nome1 = '" & pStrNome & "'' " &
+            '        " ORDER BY S.ASS_DAT_DT_DATAREVISAO"
+
+            strSQL = "SELECT ASS_STR_NR_MAODEOBRA, " &
+                    "ASS_STR_NR_VALORPECAS " &
+                    "FROM tbl_servicos " &
+                    "WHERE ASS_DAT_DT_DATAREVISAO between '" & pDataInicio & "' and '" & pDataFim & "'"
+
+
+
+
+            conn = New FbCommand()
+
+            conn.CommandText = strSQL
+            conn.Connection = conexao
+
+            objReader = conn.ExecuteReader
+
+
+
+            lLstServico = New List(Of ServicoINFO)
+
+            While objReader.Read
+                objInfo = New ServicoINFO
+
+                With objInfo
+                    .IdServico = objReader("ASS_INT_ID_SERVICO")
+                    .IdCliente = objReader("ASS_INT_ID_CLIENTE")
+                    .ServicoRealizado = objReader("ASS_STR_DS_SERVICOREALIZADO")
+                    .Quilometragem = objReader("ASS_INT_NR_QUILOMETRAGEM")
+                    If Not IsDBNull(objReader("ASS_DAT_DT_DATAREVISAO")) Then
+                        .DataServico = objReader("ASS_DAT_DT_DATAREVISAO")
+                    Else
+                        .DataServico = Nothing
+
+                    End If
+                    If Not IsDBNull(objReader("ASS_STR_NR_MAODEOBRA")) Then
+                        .MaodeObra = objReader("ASS_STR_NR_MAODEOBRA")
+                    Else
+                        .MaodeObra = String.Empty
+                    End If
+                    If Not IsDBNull(objReader("ASS_STR_DS_OBS")) Then
+                        .Observacao = objReader("ASS_STR_DS_OBS")
+                    Else
+                        .Observacao = String.Empty
+                    End If
+                    If Not IsDBNull(objReader("ASS_INT_NR_KMATUAL")) Then
+                        .KmAtual = CInt(objReader("ASS_INT_NR_KMATUAL"))
+                    End If
+
+                    If Not IsDBNull(objReader("ASS_STR_DS_PLACA")) Then
+                        .Placa = objReader("ASS_STR_DS_PLACA")
+                    End If
+
+                    If Not IsDBNull(objReader("ASS_STR_NR_VALORPECAS")) Then
+                        .ValorPecas = objReader("ASS_STR_NR_VALORPECAS")
+                    Else
+                        .ValorPecas = String.Empty
+                    End If
+                    Dim objDalCliente As New DalCliente
+                    .Nome = objDalCliente.dbObterClientePorID(.IdCliente).Nome1
+
+                End With
+                lLstServico.Add(objInfo)
+            End While
+            Return lLstServico
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

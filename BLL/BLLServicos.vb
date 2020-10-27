@@ -52,4 +52,17 @@ Public Class BLLServicos
         End Try
 
     End Function
+
+    Public Function busObterServicosComparativo(ByVal pDataInicio As String, ByVal pDataFinal As String) As List(Of ServicoINFO)
+        Dim DAL As DALServicos
+
+        Try
+            DAL = New DALServicos
+
+            Return DAL.dbObterServicosComparativo(pDataInicio, pDataFinal)
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Function
 End Class
