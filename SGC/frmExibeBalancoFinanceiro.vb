@@ -9,6 +9,9 @@ Public Class frmExibeBalancoFinanceiro
         Dim strPrimeiroDiaDoAno, strUltimoDiaDoAno, strPrimeiroDiaDoAnoAnterior, strUltimoDiaDoAnoAnterior As String
         Dim lLstServicosAnoAnterior, lLstServicosAnoCorrente As List(Of ServicoINFO)
 
+        tmpDataInicio.Value = Date.Now
+        tmpDataFim.Value = Date.Now
+
         PrimeiroDiaDoAno = "01/01/" & Date.Now.AddYears(-1).Year
         UltimoDiaDoAno = "30/12/" & Date.Now.AddYears(-1).Year
 
@@ -54,7 +57,15 @@ Public Class frmExibeBalancoFinanceiro
                            Where servico.DataServico.Month = 4
                            Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
+            Chart1.Series("Atual").Points.AddXY("ABRIL", Aggregate servico In lLstServicosAnoCorrente
+                           Where servico.DataServico.Month = 4
+                           Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
+
             Chart1.Series("Passado").Points.AddXY("MAIO", Aggregate servico In lLstServicosAnoAnterior
+                           Where servico.DataServico.Month = 5
+                           Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
+
+            Chart1.Series("Atual").Points.AddXY("MAIO", Aggregate servico In lLstServicosAnoCorrente
                            Where servico.DataServico.Month = 5
                            Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
@@ -62,7 +73,15 @@ Public Class frmExibeBalancoFinanceiro
                            Where servico.DataServico.Month = 6
                            Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
+            Chart1.Series("Atual").Points.AddXY("JUNHO", Aggregate servico In lLstServicosAnoCorrente
+                           Where servico.DataServico.Month = 6
+                           Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
+
             Chart1.Series("Passado").Points.AddXY("JULHO", Aggregate servico In lLstServicosAnoAnterior
+                           Where servico.DataServico.Month = 7
+                           Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
+
+            Chart1.Series("Atual").Points.AddXY("JULHO", Aggregate servico In lLstServicosAnoCorrente
                            Where servico.DataServico.Month = 7
                            Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
@@ -70,7 +89,15 @@ Public Class frmExibeBalancoFinanceiro
                            Where servico.DataServico.Month = 8
                            Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
+            Chart1.Series("Atual").Points.AddXY("AGOSTO", Aggregate servico In lLstServicosAnoCorrente
+                           Where servico.DataServico.Month = 8
+                           Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
+
             Chart1.Series("Passado").Points.AddXY("SETEMBRO", Aggregate servico In lLstServicosAnoAnterior
+                           Where servico.DataServico.Month = 9
+                           Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
+
+            Chart1.Series("Atual").Points.AddXY("SETEMBRO", Aggregate servico In lLstServicosAnoCorrente
                            Where servico.DataServico.Month = 9
                            Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
@@ -78,13 +105,25 @@ Public Class frmExibeBalancoFinanceiro
                            Where servico.DataServico.Month = 10
                            Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
+            Chart1.Series("Atual").Points.AddXY("OUTUBRO", Aggregate servico In lLstServicosAnoCorrente
+                           Where servico.DataServico.Month = 10
+                           Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
+
             Chart1.Series("Passado").Points.AddXY("NOVEMBRO", Aggregate servico In lLstServicosAnoAnterior
+                           Where servico.DataServico.Month = 11
+                           Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
+
+            Chart1.Series("Atual").Points.AddXY("NOVEMBRO", Aggregate servico In lLstServicosAnoCorrente
                            Where servico.DataServico.Month = 11
                            Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
             Chart1.Series("Passado").Points.AddXY("DEZEMBRO", Aggregate servico In lLstServicosAnoAnterior
                            Where servico.DataServico.Month = 12
                            Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
+
+            Chart1.Series("Atual").Points.AddXY("DEZEMBRO", Aggregate servico In lLstServicosAnoCorrente
+                          Where servico.DataServico.Month = 12
+                          Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
 
         Catch ex As Exception
@@ -161,5 +200,7 @@ Public Class frmExibeBalancoFinanceiro
 
     End Sub
 
-
+    Private Sub BtnFechar_Click(sender As Object, e As EventArgs) Handles btnFechar.Click
+        Me.Close()
+    End Sub
 End Class

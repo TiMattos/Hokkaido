@@ -10,12 +10,16 @@ Public Class frmServicos
 
     Dim pb As ProgressBar
     Dim mObjCliente As ClienteINFO
+    Dim mBolPreencherDadosRevisao As Boolean
+    Dim mObjServico As ServicoINFO = Nothing
     Private Delegate Sub CarregarRelatorioDelegate()
 
 
 
-    Sub New(ByVal objCliente As ClienteINFO)
+    Sub New(ByVal objCliente As ClienteINFO, Optional ByVal pPreencherTela As Boolean = False, Optional ByVal pObjServico As ServicoINFO = Nothing)
         mObjCliente = objCliente
+        mBolPreencherDadosRevisao = pPreencherTela
+        mObjServico = pObjServico
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -40,6 +44,14 @@ Public Class frmServicos
 
             If mObjCliente.ListaVeiculos.Count = 1 Then
                 cmbVeiculos.Enabled = False
+            End If
+
+            If mBolPreencherDadosRevisao Then
+                txtMaodeObra.Text = mObjServico.MaodeObra.Replace("R$", "").Replace(",", "").Replace(".", "")
+                txtObs.Text = mObjServico.Observacao
+                txtKmAtual.Text = mObjServico.KmAtual
+                txtKm.Text = mObjServico.KmAtual
+                txtItensManutencao.Text = mObjServico.ServicoRealizado.Replace("/", vbCrLf)
             End If
 
         Catch ex As Exception

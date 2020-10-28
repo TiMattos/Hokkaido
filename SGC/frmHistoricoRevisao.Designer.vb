@@ -24,11 +24,6 @@ Partial Class frmHistoricoRevisao
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHistoricoRevisao))
         Me.grdRevisoesRealizados = New System.Windows.Forms.DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colQuilometragem = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataRevisao = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnVisualizarRevisão = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.btnImprimirRevisao = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.dgvServicosRealizados = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,6 +36,13 @@ Partial Class frmHistoricoRevisao
         Me.lblAlerta = New System.Windows.Forms.Label()
         Me.btnEnviarEmail = New System.Windows.Forms.Button()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colQuilometragem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataRevisao = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnVisualizarRevisão = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.btnEditar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.btnExcluir = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.btnImprimirRevisao = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.grdRevisoesRealizados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServicosRealizados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -52,45 +54,12 @@ Partial Class frmHistoricoRevisao
         '
         Me.grdRevisoesRealizados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.grdRevisoesRealizados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdRevisoesRealizados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.colQuilometragem, Me.dataRevisao, Me.btnVisualizarRevisão, Me.btnImprimirRevisao})
+        Me.grdRevisoesRealizados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.colQuilometragem, Me.dataRevisao, Me.btnVisualizarRevisão, Me.btnEditar, Me.btnExcluir, Me.btnImprimirRevisao})
         Me.grdRevisoesRealizados.Location = New System.Drawing.Point(6, 19)
         Me.grdRevisoesRealizados.Name = "grdRevisoesRealizados"
         Me.grdRevisoesRealizados.RowHeadersVisible = False
         Me.grdRevisoesRealizados.Size = New System.Drawing.Size(598, 254)
         Me.grdRevisoesRealizados.TabIndex = 4
-        '
-        'id
-        '
-        Me.id.DataPropertyName = "IdServico"
-        Me.id.HeaderText = "ID"
-        Me.id.Name = "id"
-        Me.id.Visible = False
-        Me.id.Width = 43
-        '
-        'colQuilometragem
-        '
-        Me.colQuilometragem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.colQuilometragem.DataPropertyName = "Quilometragem"
-        Me.colQuilometragem.HeaderText = "Revisão de"
-        Me.colQuilometragem.Name = "colQuilometragem"
-        '
-        'dataRevisao
-        '
-        Me.dataRevisao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.dataRevisao.DataPropertyName = "DataServico"
-        Me.dataRevisao.HeaderText = "Data"
-        Me.dataRevisao.Name = "dataRevisao"
-        '
-        'btnVisualizarRevisão
-        '
-        Me.btnVisualizarRevisão.HeaderText = "Visualizar Revisão"
-        Me.btnVisualizarRevisão.Name = "btnVisualizarRevisão"
-        '
-        'btnImprimirRevisao
-        '
-        Me.btnImprimirRevisao.HeaderText = "Imprimir"
-        Me.btnImprimirRevisao.Name = "btnImprimirRevisao"
-        Me.btnImprimirRevisao.Visible = False
         '
         'dgvServicosRealizados
         '
@@ -203,6 +172,53 @@ Partial Class frmHistoricoRevisao
         Me.Guna2Panel1.Size = New System.Drawing.Size(639, 640)
         Me.Guna2Panel1.TabIndex = 13
         '
+        'id
+        '
+        Me.id.DataPropertyName = "IdServico"
+        Me.id.HeaderText = "ID"
+        Me.id.Name = "id"
+        Me.id.Visible = False
+        Me.id.Width = 43
+        '
+        'colQuilometragem
+        '
+        Me.colQuilometragem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.colQuilometragem.DataPropertyName = "Quilometragem"
+        Me.colQuilometragem.HeaderText = "Revisão de"
+        Me.colQuilometragem.Name = "colQuilometragem"
+        '
+        'dataRevisao
+        '
+        Me.dataRevisao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.dataRevisao.DataPropertyName = "DataServico"
+        Me.dataRevisao.HeaderText = "Data"
+        Me.dataRevisao.Name = "dataRevisao"
+        '
+        'btnVisualizarRevisão
+        '
+        Me.btnVisualizarRevisão.HeaderText = "Visualizar Revisão"
+        Me.btnVisualizarRevisão.Name = "btnVisualizarRevisão"
+        '
+        'btnEditar
+        '
+        Me.btnEditar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.btnEditar.HeaderText = "Editar"
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Width = 40
+        '
+        'btnExcluir
+        '
+        Me.btnExcluir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.btnExcluir.HeaderText = "Excluir"
+        Me.btnExcluir.Name = "btnExcluir"
+        Me.btnExcluir.Width = 44
+        '
+        'btnImprimirRevisao
+        '
+        Me.btnImprimirRevisao.HeaderText = "Imprimir"
+        Me.btnImprimirRevisao.Name = "btnImprimirRevisao"
+        Me.btnImprimirRevisao.Visible = False
+        '
         'frmHistoricoRevisao
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -231,11 +247,6 @@ Partial Class frmHistoricoRevisao
 
     End Sub
     Friend WithEvents grdRevisoesRealizados As DataGridView
-    Friend WithEvents id As DataGridViewTextBoxColumn
-    Friend WithEvents colQuilometragem As DataGridViewTextBoxColumn
-    Friend WithEvents dataRevisao As DataGridViewTextBoxColumn
-    Friend WithEvents btnVisualizarRevisão As DataGridViewButtonColumn
-    Friend WithEvents btnImprimirRevisao As DataGridViewButtonColumn
     Friend WithEvents dgvServicosRealizados As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
@@ -248,4 +259,11 @@ Partial Class frmHistoricoRevisao
     Friend WithEvents lblAlerta As Label
     Friend WithEvents btnEnviarEmail As Button
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents colQuilometragem As DataGridViewTextBoxColumn
+    Friend WithEvents dataRevisao As DataGridViewTextBoxColumn
+    Friend WithEvents btnVisualizarRevisão As DataGridViewButtonColumn
+    Friend WithEvents btnEditar As DataGridViewButtonColumn
+    Friend WithEvents btnExcluir As DataGridViewButtonColumn
+    Friend WithEvents btnImprimirRevisao As DataGridViewButtonColumn
 End Class

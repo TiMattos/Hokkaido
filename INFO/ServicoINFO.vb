@@ -15,6 +15,8 @@
 
     Private Property _ValorPecas As String
 
+    Private Property _idVeiculo As Integer
+
     Public Property Placa As String
         Get
             Return _placa
@@ -136,6 +138,16 @@
         End Get
         Set(value As String)
             _ValorPecas = value
+        End Set
+    End Property
+
+    Public Property IdVeiculo As Integer
+        Get
+            Return _idVeiculo
+
+        End Get
+        Set(value As Integer)
+            _idVeiculo = value
         End Set
     End Property
 End Class

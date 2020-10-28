@@ -78,7 +78,7 @@ Public Class frmHistoricoRevisao
 
                     objServico = objBLL.busObterServicoPorID(id)
                     'Dim CaminhoArquivo As String = Directory.GetCurrentDirectory & "\Relatorios de Servicos realizados" & "\" & mObjCliente.Veiculo.Placa & "_" & objServico.Quilometragem & "KM" & ".PDF"
-
+                    GerarRelatorio(objServico)
                     If Not File.Exists(objServico.CaminhoArquivo) Then
                         MessageBox.Show("Não foi possível exibir, arquivo de Revisão não encontrado")
 
@@ -86,12 +86,80 @@ Public Class frmHistoricoRevisao
                         Process.Start(objServico.CaminhoArquivo)
                     End If
 
-                Else
+                End If
+            End With
+        ElseIf e.RowIndex >= 0 AndAlso e.ColumnIndex = 4 Then
+            With DirectCast(grdRevisoesRealizados(e.ColumnIndex, e.RowIndex), DataGridViewButtonCell)
+                If .Value Is Nothing Then
+
+                    id = grdRevisoesRealizados.CurrentRow.Cells(0).Value
+                    objBLL = New BLLServicos
+                    objServico = New ServicoINFO
+
+                    objServico = objBLL.busObterServicoPorID(id)
+
+                    Dim bll As New BLLCLientes
+                    Dim frm As New frmServicos(bll.busObterClientePorID(objServico.IdCliente), True, objServico)
+                    frm.ShowDialog()
+                    'Dim CaminhoArquivo As String = Directory.GetCurrentDirectory & "\Relatorios de Servicos realizados" & "\" & mObjCliente.Veiculo.Placa & "_" & objServico.Quilometragem & "KM" & ".PDF"
+
+                    'If Not File.Exists(objServico.CaminhoArquivo) Then
+                    '    MessageBox.Show("Não foi possível exibir, arquivo de Revisão não encontrado")
+
+                    'Else
+                    '    Process.Start(objServico.CaminhoArquivo)
+                    'End If
 
                 End If
             End With
 
         End If
+    End Sub
+    Private Sub GerarRelatorio(ByVal objServicos As ServicoINFO)
+        Dim dsRelServico As New dsServicos
+        Dim crServico As crRelServicosRealizados = Nothing
+        Dim lObj() As Object = Nothing
+        Dim lobjFrmVisualizador As New frmViewer
+        Dim objBLLVeiculo As New BLLVeiculo
+        Dim objVeiculo As New VeiculoINFO
+        Dim objBllCliente As New BLLCLientes
+
+        crServico = New crRelServicosRealizados
+        objVeiculo = objBLLVeiculo.busObterVeiculoPorID(objServicos.IdVeiculo)
+        lObj = New Object(8) {}
+
+        lObj.SetValue(objBllCliente.busObterClientePorID(objServicos.IdCliente).Nome1, 0)
+        lObj.SetValue(objServicos.ServicoRealizado, 1)
+        lObj.SetValue(objVeiculo.Marca & " - " & objVeiculo.Modelo, 2)
+        lObj.SetValue(objServicos.KmAtual, 3)
+        lObj.SetValue(objVeiculo.Placa, 4)
+        lObj.SetValue(objServicos.MaodeObra.Replace("R$", "").Replace(",", "").Replace(".", ""), 5)
+        lObj.SetValue(objServicos.Observacao, 6)
+        'If rdbRevisao.Checked Then
+        lObj.SetValue("REVISÃO DE " & objServicos.Quilometragem & " MIL KMs", 7)
+        ' ElseIf rdbServico.Checked Then
+        ' lObj.SetValue(String.Empty, 7)
+        'End If
+
+        If objServicos.KmAtual <> 0 Then
+            lObj.SetValue("KM ATUAL: " & objServicos.KmAtual, 8)
+        Else
+            lObj.SetValue(String.Empty, 8)
+        End If
+
+
+        dsRelServico.Servicos.Rows.Add(lObj)
+
+        lObj = Nothing
+
+        crServico.SetDataSource(dsRelServico)
+
+
+
+        'sbBarraMensagem("GERANDO DOCUMENTO, AGURADE...")
+
+        lobjFrmVisualizador.crVisualizador.ReportSource = crServico
+        lobjFrmVisualizador.ShowDialog()
     End Sub
 
     Private Sub dgvServicosRealizados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvServicosRealizados.CellContentClick

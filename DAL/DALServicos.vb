@@ -164,7 +164,10 @@ Public Class DALServicos
                     "ASS_STR_NR_MAODEOBRA, " &
                     "ASS_STR_DS_OBS, " &
                     "ASS_INT_NR_KMATUAL, " &
-                    "ASS_STR_DS_CAMINHOARQUIVO " &
+                    "ASS_STR_DS_CAMINHOARQUIVO, " &
+                    "ASS_STR_DS_PLACA, " &
+                    "ASS_STR_NR_VALORPECAS, " &
+                    "ASS_INT_ID_VEICULO " &
                     "FROM tbl_servicos " &
                     "WHERE ASS_INT_ID_SERVICO = " & IdServico &
                     " ORDER BY ASS_INT_NR_QUILOMETRAGEM, ASS_DAT_DT_DATAREVISAO DESC"
@@ -215,6 +218,24 @@ Public Class DALServicos
                         .CaminhoArquivo = objReader("ASS_STR_DS_CAMINHOARQUIVO")
                     Else
                         .CaminhoArquivo = String.Empty
+                    End If
+
+                    If Not IsDBNull(objReader("ASS_STR_DS_PLACA")) Then
+                        .Placa = objReader("ASS_STR_DS_PLACA")
+                    Else
+                        .Placa = String.Empty
+                    End If
+
+                    If Not IsDBNull(objReader("ASS_STR_NR_VALORPECAS")) Then
+                        .ValorPecas = objReader("ASS_STR_NR_VALORPECAS")
+                    Else
+                        .ValorPecas = String.Empty
+                    End If
+
+                    If Not IsDBNull(objReader("ASS_INT_ID_VEICULO")) Then
+                        .IdVeiculo = objReader("ASS_INT_ID_VEICULO")
+                    Else
+                        .IdVeiculo = 0
                     End If
 
                 End With

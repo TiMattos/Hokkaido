@@ -38,12 +38,14 @@ Partial Class frmExibeBalancoFinanceiro
         Me.tmpDataInicio = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.DsServicosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DsServicos = New SGC.dsServicos()
+        Me.Guna2GroupBox3 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.grdResumo = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MaodeObra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pecas = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataServico = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Guna2GroupBox3 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.lblValorMaoObra = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.lblValorGeral = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -51,18 +53,17 @@ Partial Class frmExibeBalancoFinanceiro
         Me.lblValorPecas = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.DsServicos = New SGC.dsServicos()
         Me.DsServicosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DsServicosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnFechar = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.grdResumo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Guna2GroupBox3.SuspendLayout()
-        Me.Guna2GroupBox2.SuspendLayout()
-        CType(Me.DsServicos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DsServicosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsServicosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DsServicos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2GroupBox3.SuspendLayout()
+        CType(Me.grdResumo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2GroupBox2.SuspendLayout()
+        CType(Me.DsServicosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2GroupBox1
@@ -145,6 +146,7 @@ Partial Class frmExibeBalancoFinanceiro
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.btnFechar)
         Me.Guna2Panel1.Controls.Add(Me.Chart1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GroupBox3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GroupBox2)
@@ -159,6 +161,7 @@ Partial Class frmExibeBalancoFinanceiro
         'Chart1
         '
         Me.Chart1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Chart1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight
         Me.Chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash
         ChartArea1.AlignmentOrientation = CType((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical Or System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal), System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)
         ChartArea1.AxisX.Title = "Anos"
@@ -174,14 +177,18 @@ Partial Class frmExibeBalancoFinanceiro
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
         Series1.ChartArea = "ChartArea1"
+        Series1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Series1.IsValueShownAsLabel = True
+        Series1.LabelForeColor = System.Drawing.Color.DarkGreen
         Series1.Legend = "Legend1"
         Series1.LegendText = "Ano Vigente"
         Series1.LegendToolTip = "ano atual"
         Series1.MarkerSize = 2
         Series1.Name = "Atual"
         Series2.ChartArea = "ChartArea1"
+        Series2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Series2.IsValueShownAsLabel = True
+        Series2.LabelForeColor = System.Drawing.Color.DarkSeaGreen
         Series2.Legend = "Legend1"
         Series2.LegendText = "Ano Anterior"
         Series2.LegendToolTip = "Resultados do ano anterior."
@@ -191,6 +198,28 @@ Partial Class frmExibeBalancoFinanceiro
         Me.Chart1.Size = New System.Drawing.Size(1209, 215)
         Me.Chart1.TabIndex = 3
         Me.Chart1.Text = "Chart1"
+        '
+        'DsServicosBindingSource1
+        '
+        Me.DsServicosBindingSource1.DataSource = Me.DsServicos
+        Me.DsServicosBindingSource1.Position = 0
+        '
+        'DsServicos
+        '
+        Me.DsServicos.DataSetName = "dsServicos"
+        Me.DsServicos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Guna2GroupBox3
+        '
+        Me.Guna2GroupBox3.Controls.Add(Me.grdResumo)
+        Me.Guna2GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox3.Location = New System.Drawing.Point(706, 13)
+        Me.Guna2GroupBox3.Name = "Guna2GroupBox3"
+        Me.Guna2GroupBox3.ShadowDecoration.Parent = Me.Guna2GroupBox3
+        Me.Guna2GroupBox3.Size = New System.Drawing.Size(517, 295)
+        Me.Guna2GroupBox3.TabIndex = 2
+        Me.Guna2GroupBox3.Text = "Serviços realizados dentro do filtro informado"
         '
         'grdResumo
         '
@@ -274,18 +303,6 @@ Partial Class frmExibeBalancoFinanceiro
         Me.DataServico.HeaderText = "Data do Serviço"
         Me.DataServico.Name = "DataServico"
         '
-        'Guna2GroupBox3
-        '
-        Me.Guna2GroupBox3.Controls.Add(Me.grdResumo)
-        Me.Guna2GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2GroupBox3.Location = New System.Drawing.Point(706, 13)
-        Me.Guna2GroupBox3.Name = "Guna2GroupBox3"
-        Me.Guna2GroupBox3.ShadowDecoration.Parent = Me.Guna2GroupBox3
-        Me.Guna2GroupBox3.Size = New System.Drawing.Size(517, 295)
-        Me.Guna2GroupBox3.TabIndex = 2
-        Me.Guna2GroupBox3.Text = "Serviços realizados dentro do filtro informado"
-        '
         'Guna2GroupBox2
         '
         Me.Guna2GroupBox2.Controls.Add(Me.lblValorMaoObra)
@@ -321,6 +338,7 @@ Partial Class frmExibeBalancoFinanceiro
         Me.lblValorGeral.Name = "lblValorGeral"
         Me.lblValorGeral.Size = New System.Drawing.Size(3, 2)
         Me.lblValorGeral.TabIndex = 4
+        Me.lblValorGeral.Text = Nothing
         '
         'Guna2HtmlLabel6
         '
@@ -362,20 +380,24 @@ Partial Class frmExibeBalancoFinanceiro
         Me.Guna2HtmlLabel3.TabIndex = 0
         Me.Guna2HtmlLabel3.Text = "Valor total de mão de obra:"
         '
-        'DsServicos
-        '
-        Me.DsServicos.DataSetName = "dsServicos"
-        Me.DsServicos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'DsServicosBindingSource
         '
         Me.DsServicosBindingSource.DataSource = Me.DsServicos
         Me.DsServicosBindingSource.Position = 0
         '
-        'DsServicosBindingSource1
+        'btnFechar
         '
-        Me.DsServicosBindingSource1.DataSource = Me.DsServicos
-        Me.DsServicosBindingSource1.Position = 0
+        Me.btnFechar.CheckedState.Parent = Me.btnFechar
+        Me.btnFechar.CustomImages.Parent = Me.btnFechar
+        Me.btnFechar.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnFechar.ForeColor = System.Drawing.Color.White
+        Me.btnFechar.HoverState.Parent = Me.btnFechar
+        Me.btnFechar.Location = New System.Drawing.Point(1094, 534)
+        Me.btnFechar.Name = "btnFechar"
+        Me.btnFechar.ShadowDecoration.Parent = Me.btnFechar
+        Me.btnFechar.Size = New System.Drawing.Size(129, 36)
+        Me.btnFechar.TabIndex = 5
+        Me.btnFechar.Text = "Fechar"
         '
         'frmExibeBalancoFinanceiro
         '
@@ -383,20 +405,21 @@ Partial Class frmExibeBalancoFinanceiro
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1242, 571)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmExibeBalancoFinanceiro"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmExibeBalancoFinanceiro"
         Me.Guna2GroupBox1.ResumeLayout(False)
         Me.Guna2GroupBox1.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.grdResumo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsServicosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsServicos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2GroupBox3.ResumeLayout(False)
+        CType(Me.grdResumo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2GroupBox2.ResumeLayout(False)
         Me.Guna2GroupBox2.PerformLayout()
-        CType(Me.DsServicos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsServicosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DsServicosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -425,4 +448,5 @@ Partial Class frmExibeBalancoFinanceiro
     Friend WithEvents DsServicosBindingSource1 As BindingSource
     Friend WithEvents DsServicos As dsServicos
     Friend WithEvents DsServicosBindingSource As BindingSource
+    Friend WithEvents btnFechar As Guna.UI2.WinForms.Guna2Button
 End Class

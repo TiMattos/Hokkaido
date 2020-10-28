@@ -5,6 +5,7 @@
     Private _ano As Integer
     Private _placa As String
     Private _foto As Byte()
+    Private _idCliente As Integer
 
     Public Property Foto As Byte()
         Get
@@ -61,5 +62,13 @@
         End Set
     End Property
 
+    Public Property IDCliente As Integer
+        Get
+            Return _idCliente
+        End Get
+        Set(value As Integer)
+            _idCliente = value
+        End Set
+    End Property
 
 End Class

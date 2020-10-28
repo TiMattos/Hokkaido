@@ -12,4 +12,14 @@ Public Class BLLVeiculo
             Throw ex
         End Try
     End Function
+
+    Public Function busObterVeiculoPorID(ByVal pID As Integer) As VeiculoINFO
+
+        Dim objDAL As New DalVeiculo
+        Try
+            Return objDAL.dbObterVeiculosPorID(pID)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class
