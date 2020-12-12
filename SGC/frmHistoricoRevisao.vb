@@ -69,7 +69,7 @@ Public Class frmHistoricoRevisao
         Dim objServico As ServicoINFO
 
 
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex = 3 Then
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex = 4 Then
             With DirectCast(grdRevisoesRealizados(e.ColumnIndex, e.RowIndex), DataGridViewButtonCell)
                 If .Value Is Nothing Then
                     id = grdRevisoesRealizados.CurrentRow.Cells(0).Value
@@ -79,16 +79,16 @@ Public Class frmHistoricoRevisao
                     objServico = objBLL.busObterServicoPorID(id)
                     'Dim CaminhoArquivo As String = Directory.GetCurrentDirectory & "\Relatorios de Servicos realizados" & "\" & mObjCliente.Veiculo.Placa & "_" & objServico.Quilometragem & "KM" & ".PDF"
                     GerarRelatorio(objServico)
-                    If Not File.Exists(objServico.CaminhoArquivo) Then
-                        MessageBox.Show("Não foi possível exibir, arquivo de Revisão não encontrado")
+                    'If Not File.Exists(objServico.CaminhoArquivo) Then
+                    '    MessageBox.Show("Não foi possível exibir, arquivo de Revisão não encontrado")
 
-                    Else
-                        Process.Start(objServico.CaminhoArquivo)
-                    End If
+                    'Else
+                    '    Process.Start(objServico.CaminhoArquivo)
+                    'End If
 
                 End If
             End With
-        ElseIf e.RowIndex >= 0 AndAlso e.ColumnIndex = 4 Then
+        ElseIf e.RowIndex >= 0 AndAlso e.ColumnIndex = 5 Then
             With DirectCast(grdRevisoesRealizados(e.ColumnIndex, e.RowIndex), DataGridViewButtonCell)
                 If .Value Is Nothing Then
 
@@ -112,7 +112,24 @@ Public Class frmHistoricoRevisao
 
                 End If
             End With
+        ElseIf e.RowIndex >= 0 AndAlso e.ColumnIndex = 6 Then
+            With DirectCast(grdRevisoesRealizados(e.ColumnIndex, e.RowIndex), DataGridViewButtonCell)
+                If .Value Is Nothing Then
 
+                    id = grdRevisoesRealizados.CurrentRow.Cells(0).Value
+                    objBLL = New BLLServicos
+                    objServico = New ServicoINFO
+
+                    objServico = objBLL.busObterServicoPorID(id)
+
+                    If MessageBox.Show("Tem certeza que deseja excluir a revisão de " & objServico.Quilometragem & " KM do veiculo placa " & objServico.Placa & " ?", "Excluir revisão", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                        If objBLL.busExcluirServico(objServico) Then
+                            MessageBox.Show("Revisão excluida com sucesso.")
+                        End If
+                    End If
+
+                End If
+            End With
         End If
     End Sub
     Private Sub GerarRelatorio(ByVal objServicos As ServicoINFO)

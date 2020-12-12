@@ -14,6 +14,17 @@ Public Class BLLServicos
         End Try
     End Function
 
+    Public Function busExcluirServico(ByVal pObjServico As ServicoINFO) As Boolean
+        Dim objDAL As DALServicos
+        Try
+            objDAL = New DALServicos
+
+            Return objDAL.dbExcluirServico(pObjServico)
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
     Public Function busObterServicos(ByVal pIdCliente As Integer) As List(Of ServicoINFO)
         Dim DAL As DALServicos
 

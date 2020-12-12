@@ -95,6 +95,33 @@ Public Class DALServicos
             Throw ex
         End Try
     End Function
+
+    Public Function dbExcluirServico(ByVal pObjServicos As ServicoINFO) As Boolean
+        Dim strSql As String
+
+        Dim conn As FbCommand
+
+        Try
+            PreparaConexaoFB()
+            AbrirConexao()
+
+            strSql = "delete from tbl_servicos where ass_int_id_servico = " & pObjServicos.IdServico
+
+            conn = New FbCommand()
+
+            conn.Connection = conexao
+
+            conn.CommandText = strSql
+            conn.ExecuteNonQuery()
+            FecharConexao()
+
+            Return True
+        Catch ex As Exception
+            Throw ex
+            Return False
+        End Try
+
+    End Function
     Public Function dbIncluirServicos(ByVal pObjServicos As ServicoINFO) As Boolean
 
         Dim strSql As String
@@ -156,21 +183,22 @@ Public Class DALServicos
 
             AbrirConexao()
 
-            strSQL = "SELECT ASS_INT_ID_SERVICO, " &
-                     "ASS_INT_ID_CLIENTE, " &
-                    "ASS_STR_DS_SERVICOREALIZADO, " &
-                    "ASS_INT_NR_QUILOMETRAGEM, " &
-                    "ASS_DAT_DT_DATAREVISAO, " &
-                    "ASS_STR_NR_MAODEOBRA, " &
-                    "ASS_STR_DS_OBS, " &
-                    "ASS_INT_NR_KMATUAL, " &
-                    "ASS_STR_DS_CAMINHOARQUIVO, " &
-                    "ASS_STR_DS_PLACA, " &
-                    "ASS_STR_NR_VALORPECAS, " &
-                    "ASS_INT_ID_VEICULO " &
-                    "FROM tbl_servicos " &
+            strSQL = "SELECT s.ASS_INT_ID_SERVICO, " &
+                     "s.ASS_INT_ID_CLIENTE, " &
+                    "s.ASS_STR_DS_SERVICOREALIZADO, " &
+                    "s.ASS_INT_NR_QUILOMETRAGEM, " &
+                    "s.ASS_DAT_DT_DATAREVISAO, " &
+                    "s.ASS_STR_NR_MAODEOBRA, " &
+                    "s.ASS_STR_DS_OBS, " &
+                    "s.ASS_INT_NR_KMATUAL, " &
+                    "s.ASS_STR_DS_CAMINHOARQUIVO, " &
+                    "s.ASS_STR_DS_PLACA, " &
+                    "s.ASS_STR_NR_VALORPECAS, " &
+                    "V.ASS_INT_ID_VEICULO " &
+                    "FROM tbl_servicos s " &
+                    "INNER JOIN TBL_VEICULO V ON V.ASS_STR_DS_PLACA = S.ASS_STR_DS_PLACA " &
                     "WHERE ASS_INT_ID_SERVICO = " & IdServico &
-                    " ORDER BY ASS_INT_NR_QUILOMETRAGEM, ASS_DAT_DT_DATAREVISAO DESC"
+                    " ORDER BY S.ASS_INT_NR_QUILOMETRAGEM, S.ASS_DAT_DT_DATAREVISAO DESC"
 
 
 

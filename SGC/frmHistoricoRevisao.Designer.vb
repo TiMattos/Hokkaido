@@ -38,6 +38,7 @@ Partial Class frmHistoricoRevisao
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colQuilometragem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Placa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dataRevisao = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnVisualizarRevisão = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.btnEditar = New System.Windows.Forms.DataGridViewButtonColumn()
@@ -54,7 +55,7 @@ Partial Class frmHistoricoRevisao
         '
         Me.grdRevisoesRealizados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.grdRevisoesRealizados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdRevisoesRealizados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.colQuilometragem, Me.dataRevisao, Me.btnVisualizarRevisão, Me.btnEditar, Me.btnExcluir, Me.btnImprimirRevisao})
+        Me.grdRevisoesRealizados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.colQuilometragem, Me.Placa, Me.dataRevisao, Me.btnVisualizarRevisão, Me.btnEditar, Me.btnExcluir, Me.btnImprimirRevisao})
         Me.grdRevisoesRealizados.Location = New System.Drawing.Point(6, 19)
         Me.grdRevisoesRealizados.Name = "grdRevisoesRealizados"
         Me.grdRevisoesRealizados.RowHeadersVisible = False
@@ -187,6 +188,12 @@ Partial Class frmHistoricoRevisao
         Me.colQuilometragem.HeaderText = "Revisão de"
         Me.colQuilometragem.Name = "colQuilometragem"
         '
+        'Placa
+        '
+        Me.Placa.DataPropertyName = "placa"
+        Me.Placa.HeaderText = "Placa"
+        Me.Placa.Name = "Placa"
+        '
         'dataRevisao
         '
         Me.dataRevisao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -261,6 +268,7 @@ Partial Class frmHistoricoRevisao
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents colQuilometragem As DataGridViewTextBoxColumn
+    Friend WithEvents Placa As DataGridViewTextBoxColumn
     Friend WithEvents dataRevisao As DataGridViewTextBoxColumn
     Friend WithEvents btnVisualizarRevisão As DataGridViewButtonColumn
     Friend WithEvents btnEditar As DataGridViewButtonColumn
