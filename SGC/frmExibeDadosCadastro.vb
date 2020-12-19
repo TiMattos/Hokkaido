@@ -187,7 +187,7 @@ Public Class frmExibeDadosCadastro
                 MessageBox.Show("Cadastro alterado com sucesso.")
             End If
 
-            DesabilitaTela()
+            'DesabilitaTela()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)

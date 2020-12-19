@@ -131,6 +131,7 @@ Public Class frmServicos
             objInfoServicos.IdCliente = mObjCliente.ID
             objInfoServicos.Nome = mObjCliente.Nome1.ToUpper
             objInfoServicos.Veiculo = lblModelo.Text.ToUpper
+            objInfoServicos.ValorPecas = txtPecas.Text
             If Not txtMaodeObra.Text = String.Empty Then
                 valorMO = txtMaodeObra.Text.Trim.ToUpper
             Else
@@ -155,7 +156,7 @@ Public Class frmServicos
 
             Dim CaminhoArquivo As String = Directory.GetCurrentDirectory & "\Relatorios de Servicos realizados"
             Dim CaminhoArquivoCompleto As String = CaminhoArquivo & "\" & strTipoServico & "_" & Date.Now.ToString.Replace("/", "").Replace(":", "").Replace(" ", "") & ".PDF"
-            'Dim CaminhoArquivoCompleto As String = CaminhoArquivo & "\" & lblPlaca.Text & "_" & objInfoServicos.Quilometragem & "KM" & ".PDF"
+
             If Not Directory.Exists(CaminhoArquivo) Then
                 Directory.CreateDirectory(CaminhoArquivo)
 
@@ -176,7 +177,7 @@ Public Class frmServicos
             Application.DoEvents()
 
             crServico = New crRelServicosRealizados
-            lObj = New Object(8) {}
+            lObj = New Object(9) {}
 
             lObj.SetValue(objInfoServicos.Nome, 0)
             lObj.SetValue(txtItensManutencao.Text, 1)
@@ -197,6 +198,7 @@ Public Class frmServicos
                 lObj.SetValue(String.Empty, 8)
             End If
 
+            lObj.SetValue(objInfoServicos.ValorPecas, 9)
 
             dsRelServico.Servicos.Rows.Add(lObj)
 
@@ -220,14 +222,17 @@ Public Class frmServicos
 
             'End If
 
-            crServico.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, CaminhoArquivoCompleto)
-
+            'crServico.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, CaminhoArquivoCompleto)
 
             Application.UseWaitCursor = False
             Application.DoEvents()
 
-            'lobjFrmVisualizador.ShowDialog()
-            crServico.PrintToPrinter(1, 0, 0, 1)
+
+            lobjFrmVisualizador.ShowDialog()
+
+
+
+            'crServico.PrintToPrinter(1, 0, 0, 1)
 
             'Me.lblAlerta.Text = String.Empty
             'Me.lblAlerta.Refresh()
@@ -496,6 +501,18 @@ Public Class frmServicos
     End Sub
 
     Private Sub TxtKm_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKm.KeyPress
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        KeyAscii = CShort(SoNumeros(KeyAscii))
+
+        If KeyAscii = 0 Then
+
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub TxtPecas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPecas.KeyPress
         Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
 
         KeyAscii = CShort(SoNumeros(KeyAscii))

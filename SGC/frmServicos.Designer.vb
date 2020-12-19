@@ -53,6 +53,8 @@ Partial Class frmServicos
         Me.Label1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.rdbServico = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.rdbRevisao = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.txtPecas = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2GroupBox3.SuspendLayout()
@@ -317,6 +319,8 @@ Partial Class frmServicos
         '
         'Guna2GroupBox2
         '
+        Me.Guna2GroupBox2.Controls.Add(Me.txtPecas)
+        Me.Guna2GroupBox2.Controls.Add(Me.Guna2HtmlLabel7)
         Me.Guna2GroupBox2.Controls.Add(Me.txtKmAtual)
         Me.Guna2GroupBox2.Controls.Add(Me.txtMaodeObra)
         Me.Guna2GroupBox2.Controls.Add(Me.Guna2HtmlLabel15)
@@ -349,7 +353,7 @@ Partial Class frmServicos
         Me.txtKmAtual.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtKmAtual.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtKmAtual.HoverState.Parent = Me.txtKmAtual
-        Me.txtKmAtual.Location = New System.Drawing.Point(322, 52)
+        Me.txtKmAtual.Location = New System.Drawing.Point(322, 43)
         Me.txtKmAtual.Name = "txtKmAtual"
         Me.txtKmAtual.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtKmAtual.PlaceholderText = ""
@@ -372,7 +376,7 @@ Partial Class frmServicos
         Me.txtMaodeObra.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtMaodeObra.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtMaodeObra.HoverState.Parent = Me.txtMaodeObra
-        Me.txtMaodeObra.Location = New System.Drawing.Point(322, 92)
+        Me.txtMaodeObra.Location = New System.Drawing.Point(322, 71)
         Me.txtMaodeObra.Name = "txtMaodeObra"
         Me.txtMaodeObra.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtMaodeObra.PlaceholderText = ""
@@ -384,7 +388,7 @@ Partial Class frmServicos
         'Guna2HtmlLabel15
         '
         Me.Guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel15.Location = New System.Drawing.Point(250, 99)
+        Me.Guna2HtmlLabel15.Location = New System.Drawing.Point(250, 78)
         Me.Guna2HtmlLabel15.Name = "Guna2HtmlLabel15"
         Me.Guna2HtmlLabel15.Size = New System.Drawing.Size(63, 15)
         Me.Guna2HtmlLabel15.TabIndex = 16
@@ -393,7 +397,7 @@ Partial Class frmServicos
         'Guna2HtmlLabel14
         '
         Me.Guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel14.Location = New System.Drawing.Point(266, 57)
+        Me.Guna2HtmlLabel14.Location = New System.Drawing.Point(266, 48)
         Me.Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
         Me.Guna2HtmlLabel14.Size = New System.Drawing.Size(45, 15)
         Me.Guna2HtmlLabel14.TabIndex = 15
@@ -480,6 +484,38 @@ Partial Class frmServicos
         Me.rdbRevisao.UncheckedState.InnerColor = System.Drawing.Color.Transparent
         Me.rdbRevisao.UseVisualStyleBackColor = False
         '
+        'txtPecas
+        '
+        Me.txtPecas.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPecas.DefaultText = ""
+        Me.txtPecas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPecas.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPecas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPecas.DisabledState.Parent = Me.txtPecas
+        Me.txtPecas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPecas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPecas.FocusedState.Parent = Me.txtPecas
+        Me.txtPecas.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtPecas.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPecas.HoverState.Parent = Me.txtPecas
+        Me.txtPecas.Location = New System.Drawing.Point(322, 99)
+        Me.txtPecas.Name = "txtPecas"
+        Me.txtPecas.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPecas.PlaceholderText = ""
+        Me.txtPecas.SelectedText = ""
+        Me.txtPecas.ShadowDecoration.Parent = Me.txtPecas
+        Me.txtPecas.Size = New System.Drawing.Size(94, 24)
+        Me.txtPecas.TabIndex = 17
+        '
+        'Guna2HtmlLabel7
+        '
+        Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(250, 106)
+        Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
+        Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(63, 17)
+        Me.Guna2HtmlLabel7.TabIndex = 18
+        Me.Guna2HtmlLabel7.Text = "Valor peças"
+        '
         'frmServicos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -533,4 +569,6 @@ Partial Class frmServicos
     Friend WithEvents rdbRevisao As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSalvar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents txtPecas As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

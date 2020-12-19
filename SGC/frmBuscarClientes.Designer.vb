@@ -73,12 +73,12 @@ Partial Class frmBuscarClientes
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.grdCliente.DefaultCellStyle = DataGridViewCellStyle3
         Me.grdCliente.EnableHeadersVisualStyles = False
-        Me.grdCliente.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdCliente.GridColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.grdCliente.Location = New System.Drawing.Point(15, 235)
         Me.grdCliente.Name = "grdCliente"
         Me.grdCliente.ReadOnly = True
@@ -94,7 +94,7 @@ Partial Class frmBuscarClientes
         Me.grdCliente.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
         Me.grdCliente.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
         Me.grdCliente.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.grdCliente.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdCliente.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.grdCliente.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdCliente.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised
         Me.grdCliente.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -107,7 +107,7 @@ Partial Class frmBuscarClientes
         Me.grdCliente.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
         Me.grdCliente.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.grdCliente.ThemeStyle.RowsStyle.Height = 22
-        Me.grdCliente.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdCliente.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Teal
         Me.grdCliente.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'ID
@@ -197,7 +197,7 @@ Partial Class frmBuscarClientes
         Me.btnHistoricoRevisao.ShadowDecoration.Parent = Me.btnHistoricoRevisao
         Me.btnHistoricoRevisao.Size = New System.Drawing.Size(180, 45)
         Me.btnHistoricoRevisao.TabIndex = 11
-        Me.btnHistoricoRevisao.Text = "Histório de revisões e serviços"
+        Me.btnHistoricoRevisao.Text = "Histórico de revisões e serviços"
         '
         'btnRealizarServico
         '

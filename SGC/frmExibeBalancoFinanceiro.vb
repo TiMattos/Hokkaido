@@ -161,12 +161,15 @@ Public Class frmExibeBalancoFinanceiro
         Try
             If tmpDataFim.Value = Date.MinValue Then
                 MessageBox.Show("Data Inválida")
+                Return False
             End If
             If tmpDataInicio.Value = Date.MinValue Then
                 MessageBox.Show("Data Inválida")
+                Return False
             End If
             If tmpDataFim.Value < tmpDataInicio.Value Then
                 MessageBox.Show("Data final menor que a data inicial.")
+                Return False
             End If
 
             Return True

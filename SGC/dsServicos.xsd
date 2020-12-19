@@ -14,7 +14,7 @@
   <xs:element name="dsServicos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dsServicos" msprop:Generator_UserDSName="dsServicos">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Servicos" msprop:Generator_TableClassName="ServicosDataTable" msprop:Generator_TableVarName="tableServicos" msprop:Generator_RowChangedName="ServicosRowChanged" msprop:Generator_TablePropName="Servicos" msprop:Generator_RowDeletingName="ServicosRowDeleting" msprop:Generator_RowChangingName="ServicosRowChanging" msprop:Generator_RowEvHandlerName="ServicosRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicosRowDeleted" msprop:Generator_RowClassName="ServicosRow" msprop:Generator_UserTableName="Servicos" msprop:Generator_RowEvArgName="ServicosRowChangeEvent">
+        <xs:element name="Servicos" msprop:Generator_TableClassName="ServicosDataTable" msprop:Generator_TableVarName="tableServicos" msprop:Generator_TablePropName="Servicos" msprop:Generator_RowDeletingName="ServicosRowDeleting" msprop:Generator_RowChangingName="ServicosRowChanging" msprop:Generator_RowEvHandlerName="ServicosRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicosRowDeleted" msprop:Generator_UserTableName="Servicos" msprop:Generator_RowChangedName="ServicosRowChanged" msprop:Generator_RowEvArgName="ServicosRowChangeEvent" msprop:Generator_RowClassName="ServicosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome" type="xs:string" minOccurs="0" />
@@ -32,6 +32,7 @@
               <xs:element name="Observacao" msprop:Generator_ColumnVarNameInTable="columnObservacao" msprop:Generator_ColumnPropNameInRow="Observacao" msprop:Generator_ColumnPropNameInTable="ObservacaoColumn" msprop:Generator_UserColumnName="Observacao" type="xs:string" minOccurs="0" />
               <xs:element name="TipoManutencao" msprop:Generator_ColumnVarNameInTable="columnTipoManutencao" msprop:Generator_ColumnPropNameInRow="TipoManutencao" msprop:Generator_ColumnPropNameInTable="TipoManutencaoColumn" msprop:Generator_UserColumnName="TipoManutencao" type="xs:string" minOccurs="0" />
               <xs:element name="KmAtual" msprop:Generator_ColumnVarNameInTable="columnKmAtual" msprop:Generator_ColumnPropNameInRow="KmAtual" msprop:Generator_ColumnPropNameInTable="KmAtualColumn" msprop:Generator_UserColumnName="KmAtual" type="xs:string" minOccurs="0" />
+              <xs:element name="ValorPecas" msprop:Generator_ColumnVarNameInTable="columnValorPecas" msprop:Generator_ColumnPropNameInRow="ValorPecas" msprop:Generator_ColumnPropNameInTable="ValorPecasColumn" msprop:Generator_UserColumnName="ValorPecas" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

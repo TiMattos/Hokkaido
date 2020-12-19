@@ -126,6 +126,7 @@ Public Class frmHistoricoRevisao
                         If objBLL.busExcluirServico(objServico) Then
                             MessageBox.Show("Revisão excluida com sucesso.")
                         End If
+                        PreencheGrid()
                     End If
 
                 End If
