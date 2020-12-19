@@ -148,7 +148,7 @@ Public Class DALServicos
             End If
 
             strSql = "insert into TBL_SERVICOS (ASS_INT_ID_SERVICO, ASS_INT_ID_CLIENTE, ASS_STR_DS_SERVICOREALIZADO, " &
-                       "ASS_DAT_DT_DATAREVISAO, ASS_INT_NR_QUILOMETRAGEM, ASS_STR_NR_MAODEOBRA, ASS_STR_DS_OBS, ASS_INT_NR_KMATUAL, ASS_STR_DS_CAMINHOARQUIVO, ASS_STR_DS_PLACA ) " &
+                       "ASS_DAT_DT_DATAREVISAO, ASS_INT_NR_QUILOMETRAGEM, ASS_STR_NR_MAODEOBRA, ASS_STR_DS_OBS, ASS_INT_NR_KMATUAL, ASS_STR_DS_CAMINHOARQUIVO, ASS_STR_NR_VALORPECAS, ASS_STR_DS_PLACA ) " &
             "VALUES (" &
              "" & pObjServicos.IdServico & ", " &
              "" & pObjServicos.IdCliente & ", " &
@@ -159,6 +159,7 @@ Public Class DALServicos
             "'" & pObjServicos.Observacao & "', " &
             "'" & pObjServicos.KmAtual & "', " &
             "'" & pObjServicos.CaminhoArquivo & "'," &
+            "'" & pObjServicos.ValorPecas & "'," &
             "'" & pObjServicos.Placa & "')"
 
             conn.CommandText = strSql
