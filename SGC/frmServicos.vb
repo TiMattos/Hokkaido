@@ -111,6 +111,7 @@ Public Class frmServicos
         Dim lObj() As Object = Nothing
         Dim lobjFrmVisualizador As New frmViewer
         Dim valorMO As Single
+        Dim valorPEcas As Single
 
         Try
             'Me.lblAlerta.Text = String.Empty
@@ -131,7 +132,14 @@ Public Class frmServicos
             objInfoServicos.IdCliente = mObjCliente.ID
             objInfoServicos.Nome = mObjCliente.Nome1.ToUpper
             objInfoServicos.Veiculo = lblModelo.Text.ToUpper
-            objInfoServicos.ValorPecas = txtPecas.Text
+
+            If Not txtPecas.Text = String.Empty Then
+                valorPEcas = txtPecas.Text.Trim.ToUpper
+            Else
+                valorPEcas = 0
+            End If
+
+            objInfoServicos.ValorPecas = valorPEcas.ToString("C").ToUpper
             If Not txtMaodeObra.Text = String.Empty Then
                 valorMO = txtMaodeObra.Text.Trim.ToUpper
             Else
@@ -177,7 +185,7 @@ Public Class frmServicos
             Application.DoEvents()
 
             crServico = New crRelServicosRealizados
-            lObj = New Object(9) {}
+            lObj = New Object(10) {}
 
             lObj.SetValue(objInfoServicos.Nome, 0)
             lObj.SetValue(txtItensManutencao.Text, 1)
@@ -199,7 +207,7 @@ Public Class frmServicos
             End If
 
             lObj.SetValue(objInfoServicos.ValorPecas, 9)
-
+            lObj.SetValue(CSng(CInt(txtPecas.Text) + CInt(txtMaodeObra.Text)).ToString("C").ToUpper, 10)
             dsRelServico.Servicos.Rows.Add(lObj)
 
             lObj = Nothing

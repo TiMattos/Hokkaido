@@ -33,6 +33,7 @@
               <xs:element name="TipoManutencao" msprop:Generator_ColumnVarNameInTable="columnTipoManutencao" msprop:Generator_ColumnPropNameInRow="TipoManutencao" msprop:Generator_ColumnPropNameInTable="TipoManutencaoColumn" msprop:Generator_UserColumnName="TipoManutencao" type="xs:string" minOccurs="0" />
               <xs:element name="KmAtual" msprop:Generator_ColumnVarNameInTable="columnKmAtual" msprop:Generator_ColumnPropNameInRow="KmAtual" msprop:Generator_ColumnPropNameInTable="KmAtualColumn" msprop:Generator_UserColumnName="KmAtual" type="xs:string" minOccurs="0" />
               <xs:element name="ValorPecas" msprop:Generator_ColumnVarNameInTable="columnValorPecas" msprop:Generator_ColumnPropNameInRow="ValorPecas" msprop:Generator_ColumnPropNameInTable="ValorPecasColumn" msprop:Generator_UserColumnName="ValorPecas" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalGeral" msprop:Generator_ColumnVarNameInTable="columnTotalGeral" msprop:Generator_ColumnPropNameInRow="TotalGeral" msprop:Generator_ColumnPropNameInTable="TotalGeralColumn" msprop:Generator_UserColumnName="TotalGeral" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

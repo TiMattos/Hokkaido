@@ -73,8 +73,8 @@ Public Class frmOrcamento
     End Sub
 
     Private Sub FrmOrcamento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim calc As New Tranform.Try.Calculator
-        calc.Add(36, 296)
+        'Dim calc As New Tranform.Try.Calculator
+        'calc.Add(36, 296)
         Me.Refresh()
     End Sub
 

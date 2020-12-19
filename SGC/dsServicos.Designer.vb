@@ -303,6 +303,8 @@ Partial Public Class dsServicos
         
         Private columnValorPecas As Global.System.Data.DataColumn
         
+        Private columnTotalGeral As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -419,6 +421,14 @@ Partial Public Class dsServicos
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property TotalGeralColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTotalGeral
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -455,9 +465,9 @@ Partial Public Class dsServicos
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddServicosRow(ByVal Nome As String, ByVal ServicoRealizado As String, ByVal Veiculo As String, ByVal Quilometragem As String, ByVal Placa As String, ByVal MaodeObra As String, ByVal Observacao As String, ByVal TipoManutencao As String, ByVal KmAtual As String, ByVal ValorPecas As String) As ServicosRow
+        Public Overloads Function AddServicosRow(ByVal Nome As String, ByVal ServicoRealizado As String, ByVal Veiculo As String, ByVal Quilometragem As String, ByVal Placa As String, ByVal MaodeObra As String, ByVal Observacao As String, ByVal TipoManutencao As String, ByVal KmAtual As String, ByVal ValorPecas As String, ByVal TotalGeral As String) As ServicosRow
             Dim rowServicosRow As ServicosRow = CType(Me.NewRow,ServicosRow)
-            Dim columnValuesArray() As Object = New Object() {Nome, ServicoRealizado, Veiculo, Quilometragem, Placa, MaodeObra, Observacao, TipoManutencao, KmAtual, ValorPecas}
+            Dim columnValuesArray() As Object = New Object() {Nome, ServicoRealizado, Veiculo, Quilometragem, Placa, MaodeObra, Observacao, TipoManutencao, KmAtual, ValorPecas, TotalGeral}
             rowServicosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowServicosRow)
             Return rowServicosRow
@@ -490,6 +500,7 @@ Partial Public Class dsServicos
             Me.columnTipoManutencao = MyBase.Columns("TipoManutencao")
             Me.columnKmAtual = MyBase.Columns("KmAtual")
             Me.columnValorPecas = MyBase.Columns("ValorPecas")
+            Me.columnTotalGeral = MyBase.Columns("TotalGeral")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -515,6 +526,8 @@ Partial Public Class dsServicos
             MyBase.Columns.Add(Me.columnKmAtual)
             Me.columnValorPecas = New Global.System.Data.DataColumn("ValorPecas", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnValorPecas)
+            Me.columnTotalGeral = New Global.System.Data.DataColumn("TotalGeral", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTotalGeral)
             Me.columnServicoRealizado.MaxLength = 500
         End Sub
         
@@ -812,6 +825,21 @@ Partial Public Class dsServicos
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property TotalGeral() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableServicos.TotalGeralColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("O valor da coluna 'TotalGeral' na tabela 'Servicos' é DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableServicos.TotalGeralColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsNomeNull() As Boolean
             Return Me.IsNull(Me.tableServicos.NomeColumn)
         End Function
@@ -928,6 +956,18 @@ Partial Public Class dsServicos
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetValorPecasNull()
             Me(Me.tableServicos.ValorPecasColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTotalGeralNull() As Boolean
+            Return Me.IsNull(Me.tableServicos.TotalGeralColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTotalGeralNull()
+            Me(Me.tableServicos.TotalGeralColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
