@@ -1,5 +1,6 @@
 ﻿Imports BLL
 Imports INFO
+Imports UTIL
 
 
 Public Class frmIncluirVeiculo
@@ -63,9 +64,10 @@ Public Class frmIncluirVeiculo
         Try
             If ValidarCampos() Then
                 IncluiVeiculo()
+                LimparCampos()
+                Me.Close()
             End If
-            LimparCampos()
-            Me.Close()
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -82,5 +84,15 @@ Public Class frmIncluirVeiculo
         Me.Close()
     End Sub
 
+    Private Sub TxtAno_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAno.KeyPress
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
 
+        KeyAscii = CShort(SoNumeros(KeyAscii))
+
+        If KeyAscii = 0 Then
+
+            e.Handled = True
+
+        End If
+    End Sub
 End Class

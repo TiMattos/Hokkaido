@@ -24,6 +24,9 @@ Public Class frmExibeBalancoFinanceiro
         strUltimoDiaDoAnoAnterior = "12/30/" & Date.Now.AddYears(-1).Year
 
         Try
+            Application.UseWaitCursor = True
+            Application.DoEvents()
+
             lLstServicosAnoAnterior = bll.busObterServicosPorData(strPrimeiroDiaDoAnoAnterior, strUltimoDiaDoAnoAnterior)
             lLstServicosAnoCorrente = bll.busObterServicosPorData(strPrimeiroDiaDoAno, strUltimoDiaDoAno)
 
@@ -125,9 +128,12 @@ Public Class frmExibeBalancoFinanceiro
                           Where servico.DataServico.Month = 12
                           Into Sum(CInt(servico.MaodeObra.Replace("R$", "")) + CInt(servico.ValorPecas.Replace("R$", ""))))
 
+            Application.UseWaitCursor = False
+            Application.DoEvents()
+
 
         Catch ex As Exception
-
+            Throw ex
         End Try
     End Sub
     Private Sub CarregarTela()

@@ -207,7 +207,7 @@ Public Class frmServicos
             End If
 
             lObj.SetValue(objInfoServicos.ValorPecas, 9)
-            lObj.SetValue(CSng(CInt(txtPecas.Text) + CInt(txtMaodeObra.Text)).ToString("C").ToUpper, 10)
+            lObj.SetValue(CSng(CInt(IIf(txtPecas.Text = String.Empty, 0, txtPecas.Text)) + CInt(IIf(txtMaodeObra.Text = String.Empty, 0, txtMaodeObra.Text))).ToString("C").ToUpper, 10)
             dsRelServico.Servicos.Rows.Add(lObj)
 
             lObj = Nothing

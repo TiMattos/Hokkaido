@@ -144,14 +144,14 @@ Public Class frmHistoricoRevisao
 
         crServico = New crRelServicosRealizados
         objVeiculo = objBLLVeiculo.busObterVeiculoPorID(objServicos.IdVeiculo)
-        lObj = New Object(8) {}
+        lObj = New Object(10) {}
 
         lObj.SetValue(objBllCliente.busObterClientePorID(objServicos.IdCliente).Nome1, 0)
         lObj.SetValue(objServicos.ServicoRealizado, 1)
         lObj.SetValue(objVeiculo.Marca & " - " & objVeiculo.Modelo, 2)
         lObj.SetValue(objServicos.KmAtual, 3)
         lObj.SetValue(objVeiculo.Placa, 4)
-        lObj.SetValue(objServicos.MaodeObra.Replace("R$", "").Replace(",", "").Replace(".", ""), 5)
+        lObj.SetValue(objServicos.MaodeObra, 5)
         lObj.SetValue(objServicos.Observacao, 6)
         'If rdbRevisao.Checked Then
         lObj.SetValue("REVISÃO DE " & objServicos.Quilometragem & " MIL KMs", 7)
@@ -165,6 +165,8 @@ Public Class frmHistoricoRevisao
             lObj.SetValue(String.Empty, 8)
         End If
 
+        lObj.SetValue(objServicos.ValorPecas, 9)
+        lObj.SetValue(CSng(CInt(IIf(objServicos.ValorPecas = String.Empty, 0, objServicos.ValorPecas)) + CInt(IIf(objServicos.MaodeObra = String.Empty, 0, objServicos.MaodeObra))).ToString("C").ToUpper, 10)
 
         dsRelServico.Servicos.Rows.Add(lObj)
 

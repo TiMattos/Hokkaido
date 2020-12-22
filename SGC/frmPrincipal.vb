@@ -215,6 +215,9 @@ Public Class frmPrincipal
     Private Sub BtnBalancoFinanceiro_Click(sender As Object, e As EventArgs) Handles btnBalancoFinanceiro.Click
         Dim frm As New frmExibeBalancoFinanceiro
         Try
+            Application.UseWaitCursor = True
+            Application.DoEvents()
+
             frm.ShowDialog()
             frm.Dispose()
 
